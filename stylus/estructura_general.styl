@@ -39,3 +39,18 @@ textarea
 		.entry-content
 			column-count: 2
 			column-gap: 1em
+
+// Ocultar y mostrar cosas
+
+@media all and (max-width: $mobile)
+	.hidden-mobile
+		display: none
+
+@media all and (max-width: $desktop)
+	.hidden-tableta
+		display: none
+
+@media all and (min-width: ($desktop+1))
+	.hidden-desktop
+		display: none
+	

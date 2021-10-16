@@ -133,28 +133,32 @@ function bld_personalizar_footer_storefront()
 
 	if($googlemaps_options)
 	{
-		echo '<h2>Ubicación</h2>'.$googlemaps_options;
+		echo '<h2>Ubicación</h2>' . $googlemaps_options;
 	}
 
 	if($email_options)
 	{
-		echo '<p><h2>Contacto:</h2><i class="fas fa-envelope-square fa-lg"></i> '.$email_options;
+		echo '<h2>Contacto:</h2><p><i class="fas fa-envelope-square fa-lg"></i> ' . $email_options;
 	
 		if($telefono_options)
 		{
-			echo '<br /><i class="fas fa-phone-square-alt fa-lg"></i> '.$telefono_options;
+			echo '<br /><i class="fas fa-phone-square-alt fa-lg"></i> ' . $telefono_options;
 		}
 	
 		if($celular_options)
 		{
-			echo '<br /><a href="whatsapp://send?phone='.$celular_options.'&text=Hola Solisem. "><i class="fab fa-whatsapp-square fa-lg"></i></a> '.$celular_options;
+			// Se oculta en desktop
+			echo '<br class="hidden-desktop" /><a class="hidden-desktop" href="whatsapp://send?phone=' . $celular_options . '&text=Hola Solisem. "><i class="fab fa-whatsapp-square fa-lg"></i></a> <span class="hidden-desktop">' . $celular_options . '</span>';
+			
+			// Se muestra sólo en desktop
+			echo '<br class="hidden-tableta hidden-mobile" /><a class="hidden-tableta hidden-mobile" href="https://web.whatsapp.com/send?l=en&phone=' . $celular_options . '&text=Hola Solisem. "><i class="fab fa-whatsapp-square fa-lg"></i></a> <span class="hidden-mobile hidden-tableta">' . $celular_options . '</span>';
 		}
 		echo '</p>';
 	}
 
 	if($direccion_options)
 	{
-		echo '<p><h2>Showroom:</h2> '.$direccion_options;
+		echo '<h2>Showroom:</h2> ' . $direccion_options . '<p>';
 		
 		if($localidad_options)
 		{
@@ -188,7 +192,7 @@ function bld_personalizar_footer_storefront()
 
 	if($horario_options)
 	{
-		echo '<p><h2>Horario de Atención:</h2> '.$horario_options.'</p>';
+		echo '<h2>Horario de Atención:</h2><p>' . $horario_options . '</p>';
 	}
 	
 	?>
