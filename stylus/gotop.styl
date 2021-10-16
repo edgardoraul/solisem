@@ -1,0 +1,45 @@
+// Ir hacia arriba
+.gotop
+	bottom 4em
+	display inline-block
+	height 50px
+	position fixed
+	right -5em
+	transition_comun()
+	text-align: center
+	// width 40px
+	z-index 892
+
+	a
+		background negro
+		border-radius 4px 0 0 4px
+		color blanco_puro !important
+		display block
+		font-size: 30px
+		line-height: 1
+		opacity 0.5
+		outline: none
+		padding: 0.2em 0.5em 0.25em 0.5em
+		text-decoration none
+		text-shadow_lindo()
+		transition_comun()
+		
+
+		&:hover
+			opacity 1
+
+	&-mostrar
+		// bottom 1em
+		right -2px
+
+	&-ocultar
+		// bottom -5em
+		right -5em
+
+@media all and (min-width: $tableta)
+	.gotop
+		bottom: 1em
+
+@media only print
+	.gotop
+		display none
