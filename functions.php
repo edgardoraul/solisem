@@ -158,31 +158,31 @@ function bld_personalizar_footer_storefront()
 
 	if($direccion_options)
 	{
-		echo '<h2>Showroom:</h2> ' . $direccion_options . '<p>';
+		echo '<h2>Showroom:</h2><p>' . $direccion_options;
 		
 		if($localidad_options)
 		{
-			echo ' - '.$localidad_options;
+			echo ' - ' . $localidad_options;
 		}
 
 		if($departamento_options)
 		{
-			echo ' - '.$departamento_options;
+			echo ' - ' . $departamento_options;
 		}
 
 		if($codigopostal_options)
 		{
-			echo ' - '.$codigopostal_options;
+			echo ' - ' . $codigopostal_options;
 		}
 
 		if($provincia_options)
 		{
-			echo ' - '.$provincia_options;
+			echo ' - ' . $provincia_options;
 		}
 
 		if($pais_options)
 		{
-			echo ' - '.$pais_options;
+			echo ' - ' . $pais_options;
 		}
 
 		echo '</p>';
