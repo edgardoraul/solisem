@@ -168,14 +168,15 @@ $( document ).ready( function()
 		autoWidth : true,
 		singleItem : true,
 		// Currently available: "fade", "backSlide", "goDown", "fadeUp"
-		transitionStyle : "goDown"
+		// transitionStyle : "goDown"
+		transitionStyle : "fade"
 	});
 
 	// Activación del slider de la home de portfolio
-	$( "#owl-uno" ).owlCarousel({
+	/* $( "#owl-uno" ).owlCarousel({
 		autoPlay: true,
 		lazyLoad : true
-	});
+	}); */
 
 	// Slider galería de una entrada
 	$( "#owl-galeria" ).owlCarousel({

@@ -120,12 +120,15 @@ function bld_personalizar_footer_storefront()
 
 	$facebook_options 			= of_get_option( 'facebook_options', '' );
 	$twitter_options			= of_get_option( 'twitter_options', '' );
-	$instagram_options			= of_get_option( 'google_analitycs_options', '' );
-	$linkedin_options			= of_get_option( 'google_analitycs_options', '' );
+	$instagram_options			= of_get_option( 'instagram_options', '' );
+	$linkedin_options			= of_get_option( 'linkedin_options', '' );
 
 
 ?>
 <div class="site-info">
+		
+		
+		
 	<?php
 
 	if($googlemaps_options)
@@ -135,16 +138,16 @@ function bld_personalizar_footer_storefront()
 
 	if($email_options)
 	{
-		echo '<p><h2>Contacto:</h2><strong>E-mail:</strong> '.$email_options;
+		echo '<p><h2>Contacto:</h2><i class="fas fa-envelope-square fa-lg"></i> '.$email_options;
 	
 		if($telefono_options)
 		{
-			echo ' - <strong>Teléfono Fijo:</strong> '.$telefono_options;
+			echo '<br /><i class="fas fa-phone-square-alt fa-lg"></i> '.$telefono_options;
 		}
 	
 		if($celular_options)
 		{
-			echo ' - <strong>Teléfono Celular:</strong> '.$celular_options;
+			echo '<br /><a href="whatsapp://send?phone='.$celular_options.'&text=Hola Solisem. "><i class="fab fa-whatsapp-square fa-lg"></i></a> '.$celular_options;
 		}
 		echo '</p>';
 	}
@@ -189,13 +192,49 @@ function bld_personalizar_footer_storefront()
 	}
 	
 	?>
+
+	<!-- Las redes sociales -->
+	<div class="align-center redes_sociales">
+		<?php
+
+		// Facebook
+		if($facebook_options)
+		{
+			echo '<a href="//' . $facebook_options . '" title="Facebook" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a> ';
+		}
+
+		// Instagram
+		if($instagram_options)
+		{
+			echo '<a href="//www.instagram.com/' . $instagram_options . '" title="Instagram" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a> ';
+		}
+
+		// Twitter
+		if($twitter_options)
+		{
+			echo '<a href="//www.twitter.com/' . $twitter_options . '" title="Twitter" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a> ';
+		}
+
+		// Linkedin
+		if($linkedin_options)
+		{
+			echo '<a href="//' . $linkedin_options . '" title="Linkedin" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a> ';
+		}
+		?>		
+		
+	</div>
+
+	<!-- Los cŕeditos -->
 	<div class="align-center separador">
 		<h2>&copy; <?php echo get_the_date( 'Y' ) . ' ' . get_bloginfo( 'name' ) ; ?></h2>
 	</div>
 
+
+	<!-- Ir hacia arriba -->
 	<span id="ir_arriba" class="gotop">
 		<a href="#" title="Ir arriba">&UpArrow;</a>
 	</span>
+
 </div>
 <?php }
 

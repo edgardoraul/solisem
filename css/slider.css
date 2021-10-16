@@ -354,6 +354,32 @@ input:focus,
 textarea:focus {
   outline-color: #6dbcdb;
 }
+.fab {
+  transition: all 0.3s ease-in-out;
+}
+.fab:hover {
+  opacity: 0.5;
+}
+.fa-whatsapp-square {
+  color: #128c7e;
+}
+.fa-instagram-square {
+  color: #d51a80;
+/* background: #f09433; 
+	background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+	background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+	background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+	filter: unquote("progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 )"); */
+}
+.fa-linkedin {
+  color: #0e72a3;
+}
+.fa-twitter-square {
+  color: #219ced;
+}
+.fa-facebook-square {
+  color: #4664a5;
+}
 @media all and (min-width: 768px) {
   .post-10 .entry-content {
     column-count: 2;
@@ -1089,7 +1115,7 @@ textarea:focus {
   z-index: 892;
 }
 .gotop a {
-  background: #1a171b;
+  background: #fc4349;
   border-radius: 4px 0 0 4px;
   color: #fff !important;
   display: block;

@@ -282,7 +282,7 @@ function optionsframework_options()
 		'name'			=>	__('Ubicación en el mapa', 'options_framework_theme'),
 		'desc'			=>	__('Pegar aquí el código que te brinda Google Maps para mostrar tu ubicación real.', 'options_framework_theme'),
 		'id'			=>	'googlemaps_options',
-		'placeholder'	=>	__('Pegar aquí el código que te brinde Google Maps.', 'options_framework_theme'),
+		'placeholder'	=>	__('Pegar aquí el código que te brinde Google Maps en modo html. Asegurate de poner width="100%" y heigth="350".', 'options_framework_theme'),
 		'class'			=>	'',
 		'type'			=>	'editor',
 	);
