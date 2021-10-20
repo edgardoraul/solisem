@@ -58,7 +58,7 @@ require_once "includes/09._thumbnails.php";
 // require_once "includes/20._minificacion.php";
 
 // Carteles centrales de la home
-require_once "includes/24._carteles_centrales.php";
+require_once "includes/21._carteles.php";
 
 // Opciones de la plantilla
 require_once "includes/options-framework.php";
