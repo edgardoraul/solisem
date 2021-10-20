@@ -93,6 +93,11 @@ get_header(); ?>
 <?php //};?>
 		<!-- Fin del Slider -->
 
+
+        <!-- Comienzo de los carteles -->
+
+        <!-- Fin de los carteles -->
+
 		<?php
 			echo "<br />";
 			while ( have_posts() ) :

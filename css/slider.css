@@ -344,6 +344,7 @@ html.swipebox-html.swipebox-touch {
 }
 .site-header {
   background-color: transparent;
+  margin-bottom: 0 !important;
 }
 .main-navigation ul li a:hover {
   color: #fc4349;
