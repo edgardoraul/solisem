@@ -402,6 +402,58 @@ textarea:focus {
     display: none;
   }
 }
+.losCarteles {
+  margin: 2em auto 0 auto;
+}
+.losCarteles__articulo {
+  margin: 0.5em auto;
+}
+.losCarteles__articulo__contenedor {
+  display: inline-block;
+  padding: 0 0.5em;
+  vertical-align: middle;
+  width: calc(100% - 100px - 1em);
+}
+.losCarteles__articulo__header h1,
+.losCarteles__articulo__header h2,
+.losCarteles__articulo__header h3,
+.losCarteles__articulo__header h4,
+.losCarteles__articulo__header h5,
+.losCarteles__articulo__header h6 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.losCarteles__articulo__img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+}
+.losCarteles__articulo__contenido {
+  display: none;
+}
+.losCarteles__articulo__contenido h2,
+.losCarteles__articulo__contenido h3,
+.losCarteles__articulo__contenido h4,
+.losCarteles__articulo__contenido h5,
+.losCarteles__articulo__contenido h6 {
+  margin-top: 0;
+}
+@media all and (min-width: 480px) {
+  .losCarteles__articulo__contenedor {
+    padding: 0 1em;
+  }
+}
+@media all and (min-width: 768px) {
+  .losCarteles__articulo__contenedor {
+    vertical-align: top;
+  }
+  .losCarteles__articulo__img {
+    vertical-align: top;
+  }
+  .losCarteles__articulo__contenido {
+    display: inline-block;
+  }
+}
 .owl-carousel .owl-wrapper:after {
   content: ".";
   display: block;

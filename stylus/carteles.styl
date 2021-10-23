@@ -1,0 +1,49 @@
+// Estructura de los carteles de la home
+.losCarteles
+	margin: 2em auto 0 auto
+
+	&__articulo
+		margin: 0.5em auto
+
+		&__contenedor
+			display: inline-block
+			padding: 0 0.5em
+			vertical-align: middle
+			width: calc(100% - 100px - 1em)
+		
+		&__header
+			h1, h2, h3, h4, h5, h6
+				font-size: 1.2em
+				font-weight: bold
+
+		
+		&__img
+			display: inline-block
+			vertical-align: middle
+			width: 100px
+		
+
+		&__contenido
+			display: none
+			h2, h3, h4, h5, h6
+				margin-top: 0
+
+
+// Sólo lo mostraremos a partir de tabletas
+@media all and (min-width: $mobile)
+	.losCarteles
+		&__articulo
+			&__contenedor
+				padding: 0 1em
+
+@media all and (min-width: $tableta)
+	.losCarteles
+		&__articulo
+			&__contenedor
+				vertical-align: top
+
+			&__img
+				vertical-align: top
+
+			&__contenido
+				display: inline-block

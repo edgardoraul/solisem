@@ -96,6 +96,51 @@ get_header(); ?>
 
         <!-- Comienzo de los carteles -->
 
+		<?php // WP_Query arguments
+		$args = array (
+			'post_type'		=> array( 'carteles_post_type' ),
+			'order'			=> 'ASC',
+			'orderby'		=> 'menu_order',
+			'hierachical'	=> true,
+		);
+
+		// The Query
+		$carteles_post_type_home = new WP_Query( $args );
+
+		// The Loop
+		if ( $carteles_post_type_home->have_posts() )
+		{
+			echo '<div class="losCarteles">';
+			while ( $carteles_post_type_home->have_posts() )
+			{
+				$carteles_post_type_home->the_post();
+
+			?>
+			
+			<article class="losCarteles__articulo">
+				<figure class="losCarteles__articulo__img">
+					<?php the_post_thumbnail('custom-thumb-100-100');?>
+				</figure>
+				<div class="losCarteles__articulo__contenedor">
+					<header class="losCarteles__articulo__header">
+						<h3><?php the_title();?></h3>
+					</header>
+					<div class="losCarteles__articulo__contenido">
+						<?php the_content();?>
+					</div>
+				</div>
+			</article>
+
+	<?php	}
+		echo "</div>";
+		} else {
+			echo '<div class="losCarteles"><header><h2>No hay nada</h2></header></div>';
+		}
+		// Restore original Post Data
+		wp_reset_postdata();
+		
+		?>
+
         <!-- Fin de los carteles -->
 
 		<?php
