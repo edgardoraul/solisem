@@ -124,6 +124,143 @@ function optionsframework_options()
 	);*/
 
 	/*====================================================================================*/
+	// Pestaña Sistemas Industriales
+	$options[]	=	array(
+		'name'	=>	__('Sistemas Industriales', 'options_framework_theme'),
+		'type'	=>	'heading');
+	
+		// Primer tipo de sistema
+		$options[]	=	array(
+			'name'			=>	__('Título para el primer tipo de sistema', 'options_framework_theme'),
+			'desc'			=>	__('Introduzca un título descriptivo.', 'options_framework_theme'),
+			'id'			=>	'sistema_1',
+			'placeholder'	=>	__('Tipo de Sistemas xxx', 'options_framework_theme'),
+			'class'			=>	'',
+			'type'			=>	'text',
+		);
+
+		// Primer titulo del primer sistema
+		$options[]	=	array(
+			'name'			=>	__('Título para el sistema 1', 'options_framework_theme'),
+			'desc'			=>	__('Introduzca un título descriptivo.', 'options_framework_theme'),
+			'id'			=>	'sistema_titulo_1',
+			'placeholder'	=>	__('Sistemas tipo xxx...', 'options_framework_theme'),
+			'class'			=>	'',
+			'type'			=>	'text',
+		);
+
+		// Contenido o descripción
+		$options[]	=	array(
+			'name'			=>	__('Mensaje o descripción', 'options_framework_theme'),
+			'desc'			=>	__('Introduzca un contenido.', 'options_framework_theme'),
+			'id'			=>	'sistema_contenido_1',
+			'placeholder'	=>	__('Contenido de ejemplo...', 'options_framework_theme'),
+			'class'			=>	'',
+			'type'			=>	'textarea',
+		);
+
+		// Icono o imagen descriptiva
+		$options[]	=	array(
+			'name'		=>	__('Icono o imagen que identifica al sistema 1', 'options_framework_theme'),
+			'desc'		=>	__('Selecciona una imagen, tamaño 100px x 100px.', 'options_framework_theme'),
+			'id'		=>	'sistema_logo_1',
+			'type'		=>	'upload');
+		
+
+		// Primer titulo del segundo sistema
+		$options[]	=	array(
+			'name'			=>	__('Título para el sistema 2', 'options_framework_theme'),
+			'desc'			=>	__('Introduzca un título descriptivo.', 'options_framework_theme'),
+			'id'			=>	'sistema_titulo_2',
+			'placeholder'	=>	__('Sistemas tipo xxx...', 'options_framework_theme'),
+			'class'			=>	'',
+			'type'			=>	'text',
+		);
+
+		// Contenido o descripción
+		$options[]	=	array(
+			'name'			=>	__('Mensaje o descripción', 'options_framework_theme'),
+			'desc'			=>	__('Introduzca un contenido.', 'options_framework_theme'),
+			'id'			=>	'sistema_contenido_2',
+			'placeholder'	=>	__('Contenido de ejemplo...', 'options_framework_theme'),
+			'class'			=>	'',
+			'type'			=>	'textarea',
+		);
+
+		// Icono o imagen descriptiva
+		$options[]	=	array(
+			'name'		=>	__('Icono o imagen que identifica al sistema 2', 'options_framework_theme'),
+			'desc'		=>	__('Selecciona una imagen, tamaño 100px x 100px.', 'options_framework_theme'),
+			'id'		=>	'sistema_logo_2',
+			'type'		=>	'upload');
+		
+		
+		// Segundo tipo de sistema
+		$options[]	=	array(
+			'name'			=>	__('Título para el segundo tipo de sistema', 'options_framework_theme'),
+			'desc'			=>	__('Introduzca un título descriptivo.', 'options_framework_theme'),
+			'id'			=>	'sistema_2',
+			'placeholder'	=>	__('Tipo de Sistemas 2 xxx', 'options_framework_theme'),
+			'class'			=>	'',
+			'type'			=>	'text',
+		);
+
+		// Primer titulo del primer sistema
+		$options[]	=	array(
+			'name'			=>	__('Título para el sistema 3', 'options_framework_theme'),
+			'desc'			=>	__('Introduzca un título descriptivo.', 'options_framework_theme'),
+			'id'			=>	'sistema_titulo_3',
+			'placeholder'	=>	__('Sistemas tipo xxx...', 'options_framework_theme'),
+			'class'			=>	'',
+			'type'			=>	'text',
+		);
+
+		// Contenido o descripción
+		$options[]	=	array(
+			'name'			=>	__('Mensaje o descripción', 'options_framework_theme'),
+			'desc'			=>	__('Introduzca un contenido.', 'options_framework_theme'),
+			'id'			=>	'sistema_contenido_3',
+			'placeholder'	=>	__('Contenido de ejemplo...', 'options_framework_theme'),
+			'class'			=>	'',
+			'type'			=>	'textarea',
+		);
+
+		// Icono o imagen descriptiva
+		$options[]	=	array(
+			'name'		=>	__('Icono o imagen que identifica al sistema 3', 'options_framework_theme'),
+			'desc'		=>	__('Selecciona una imagen, tamaño 100px x 100px.', 'options_framework_theme'),
+			'id'		=>	'sistema_logo_3',
+			'type'		=>	'upload');
+		
+
+		// Primer titulo del segundo sistema
+		$options[]	=	array(
+			'name'			=>	__('Título para el sistema 4', 'options_framework_theme'),
+			'desc'			=>	__('Introduzca un título descriptivo.', 'options_framework_theme'),
+			'id'			=>	'sistema_titulo_4',
+			'placeholder'	=>	__('Sistemas tipo xxx...', 'options_framework_theme'),
+			'class'			=>	'',
+			'type'			=>	'text',
+		);
+
+		// Contenido o descripción
+		$options[]	=	array(
+			'name'			=>	__('Mensaje o descripción', 'options_framework_theme'),
+			'desc'			=>	__('Introduzca un contenido.', 'options_framework_theme'),
+			'id'			=>	'sistema_contenido_4',
+			'placeholder'	=>	__('Contenido de ejemplo...', 'options_framework_theme'),
+			'class'			=>	'',
+			'type'			=>	'textarea',
+		);
+
+		// Icono o imagen descriptiva
+		$options[]	=	array(
+			'name'		=>	__('Icono o imagen que identifica al sistema 4', 'options_framework_theme'),
+			'desc'		=>	__('Selecciona una imagen, tamaño 100px x 100px.', 'options_framework_theme'),
+			'id'		=>	'sistema_logo_4',
+			'type'		=>	'upload');
+	
+	
 	/* =================== Pestaña Redes Sociales ============================== */
 	$options[]	=	array(
 	'name'	=>	__('Redes Sociales', 'options_framework_theme'),

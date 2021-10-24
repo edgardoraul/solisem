@@ -94,29 +94,27 @@ get_header(); ?>
 		<!-- Fin del Slider -->
 
 
+<?php
+	// Comienzo de los carteles de los sistemas
+	$sistema_1				= of_get_option( 'sistema_1', '' );
+	$sistema_titulo_1		= of_get_option( 'sistema_titulo_1', '' );
+	$sistema_contenido_1	= of_get_option( 'sistema_contenido_1', '' );
+	$sistema_logo_1			= of_get_option( 'sistema_logo_1', '' );
+	$sistema_titulo_2		= of_get_option( 'sistema_titulo_2', '' );
+	$sistema_contenido_2	= of_get_option( 'sistema_contenido_2', '' );
+	$sistema_logo_2			= of_get_option( 'sistema_logo_2', '' );
+
+	$sistema_2				= of_get_option( 'sistema_2', '' );
+	$sistema_titulo_3		= of_get_option( 'sistema_titulo_3', '' );
+	$sistema_contenido_3	= of_get_option( 'sistema_contenido_3', '' );
+	$sistema_logo_3			= of_get_option( 'sistema_logo_3', '' );
+	$sistema_titulo_4		= of_get_option( 'sistema_titulo_4', '' );
+	$sistema_contenido_4	= of_get_option( 'sistema_contenido_4', '' );
+	$sistema_logo_4			= of_get_option( 'sistema_logo_4', '' );
+
+?>
         <!-- Comienzo de los carteles -->
-
-		<?php // WP_Query arguments
-		$args = array (
-			'post_type'		=> array( 'segmentos_post_type' ),
-			'order'			=> 'ASC',
-			'orderby'		=> 'menu_order',
-			'hierachical'	=> true,
-		);
-
-		// The Query
-		$segmentos_post_type_home = new WP_Query( $args );
-
-		// The Loop
-		if ( $segmentos_post_type_home->have_posts() )
-		{
-			echo '<div class="losCarteles">';
-			while ( $segmentos_post_type_home->have_posts() )
-			{
-				$segmentos_post_type_home->the_post();
-
-			?>
-			
+		<div class="losCarteles">
 			<article class="losCarteles__articulo">
 				<figure class="losCarteles__articulo__img">
 					<?php the_post_thumbnail('custom-thumb-100-100');?>
@@ -130,24 +128,64 @@ get_header(); ?>
 					</div>
 				</div>
 			</article>
+		</div>
 
-	<?php	}
+		<!-- Fin de los Carteles -->
+
+		
+		<!-- Comienzo de los Segementos -->
+		<?php // WP_Query arguments
+		$args = array (
+			'post_type'		=> array( 'segmentos_post_type' ),
+			'order'			=> 'ASC',
+			'orderby'		=> 'menu_order',
+			'hierachical'	=> true,
+		);
+		
+		// The Query
+		$segmentos_post_type_home = new WP_Query( $args );
+		
+		// The Loop
+		if ( $segmentos_post_type_home->have_posts() )
+		{
+			echo '<div class="losSegmentos">';
+			while ( $segmentos_post_type_home->have_posts() )
+			{
+				$segmentos_post_type_home->the_post();
+				
+				?>
+			
+			<article class="losSegmentos__articulo">
+				<figure class="losSegmentos__articulo__img">
+					<?php the_post_thumbnail('custom-thumb-100-100');?>
+				</figure>
+				<div class="losSegmentos__articulo__contenedor">
+					<header class="losSegmentos__articulo__header">
+						<h3><?php the_title();?></h3>
+					</header>
+					<div class="losSegmentos__articulo__contenido">
+						<?php the_content();?>
+					</div>
+				</div>
+			</article>
+
+			<?php	}
 		echo "</div>";
-		} else {
-			echo '<div class="losCarteles"><header><h2>No hay nada</h2></header></div>';
+	} else {
+		echo '<div class="losSegmentos"><header><h2>No hay nada</h2></header></div>';
 		}
 		// Restore original Post Data
 		wp_reset_postdata();
 		
 		?>
 
-        <!-- Fin de los carteles -->
+<!-- Fin de los segmentos -->
 
-		<?php
+<?php
 			echo "<br />";
 			while ( have_posts() ) :
 				the_post();
-
+				
 				do_action( 'storefront_page_before' );
 
 				get_template_part( 'content', 'page' );
