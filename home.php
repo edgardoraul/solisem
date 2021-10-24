@@ -98,22 +98,22 @@ get_header(); ?>
 
 		<?php // WP_Query arguments
 		$args = array (
-			'post_type'		=> array( 'carteles_post_type' ),
+			'post_type'		=> array( 'segmentos_post_type' ),
 			'order'			=> 'ASC',
 			'orderby'		=> 'menu_order',
 			'hierachical'	=> true,
 		);
 
 		// The Query
-		$carteles_post_type_home = new WP_Query( $args );
+		$segmentos_post_type_home = new WP_Query( $args );
 
 		// The Loop
-		if ( $carteles_post_type_home->have_posts() )
+		if ( $segmentos_post_type_home->have_posts() )
 		{
 			echo '<div class="losCarteles">';
-			while ( $carteles_post_type_home->have_posts() )
+			while ( $segmentos_post_type_home->have_posts() )
 			{
-				$carteles_post_type_home->the_post();
+				$segmentos_post_type_home->the_post();
 
 			?>
 			
