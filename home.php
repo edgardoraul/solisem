@@ -112,8 +112,31 @@ get_header(); ?>
 	$sistema_contenido_4	= of_get_option( 'sistema_contenido_4', '' );
 	$sistema_logo_4			= of_get_option( 'sistema_logo_4', '' );
 
+	echo '<div class="losCarteles">';
+	if($sistema_1)
+	{
+		echo '
+			<header>
+				<h2>'.$sistema_1.'</h2>
+			</header>
+			<article class="losCarteles__articulo">
+				<figure class="losCarteles__articulo__img">
+					<img src="'.$sistema_logo_1.'" alt="'.get_bloginfo("name").'" />
+				</figure>
+				<div class="losCarteles__articulo__contenedor">
+					<header class="losCarteles__articulo__header">
+						<h3>'.$sistema_titulo_1.'</h3>
+					</header>
+					<div class="losCarteles__articulo__contenido">
+						<p>'.$sistema_contenido_1.'</p>
+					</div>
+				</div>
+			</articulo>';
+	}
+	echo '</div>';
+
 ?>
-        <!-- Comienzo de los carteles -->
+        <!-- Comienzo de los carteles 
 		<div class="losCarteles">
 			<article class="losCarteles__articulo">
 				<figure class="losCarteles__articulo__img">
@@ -128,7 +151,7 @@ get_header(); ?>
 					</div>
 				</div>
 			</article>
-		</div>
+		</div>-->
 
 		<!-- Fin de los Carteles -->
 
