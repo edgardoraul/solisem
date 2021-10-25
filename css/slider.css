@@ -454,6 +454,12 @@ textarea:focus {
     display: inline-block;
   }
 }
+.losSegmentos__wrapper {
+  border: 1px solid #fc4349;
+}
+.losSegmentos__articulo {
+  background-color: #7f8c8d;
+}
 .owl-carousel .owl-wrapper:after {
   content: ".";
   display: block;

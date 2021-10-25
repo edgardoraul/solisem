@@ -131,7 +131,55 @@ get_header(); ?>
 						<p>'.$sistema_contenido_1.'</p>
 					</div>
 				</div>
-			</articulo>';
+			</articulo>
+			<article class="losCarteles__articulo">
+				<figure class="losCarteles__articulo__img">
+					<img src="'.$sistema_logo_2.'" alt="'.get_bloginfo("name").'" />
+				</figure>
+				<div class="losCarteles__articulo__contenedor">
+					<header class="losCarteles__articulo__header">
+						<h3>'.$sistema_titulo_2.'</h3>
+					</header>
+					<div class="losCarteles__articulo__contenido">
+						<p>'.$sistema_contenido_2.'</p>
+					</div>
+				</div>
+			</articulo>
+		';
+	}
+	if($sistema_2)
+	{
+		echo '
+			<header>
+				<h2>'.$sistema_2.'</h2>
+			</header>
+			<article class="losCarteles__articulo">
+				<figure class="losCarteles__articulo__img">
+					<img src="'.$sistema_logo_3.'" alt="'.get_bloginfo("name").'" />
+				</figure>
+				<div class="losCarteles__articulo__contenedor">
+					<header class="losCarteles__articulo__header">
+						<h3>'.$sistema_titulo_3.'</h3>
+					</header>
+					<div class="losCarteles__articulo__contenido">
+						<p>'.$sistema_contenido_3.'</p>
+					</div>
+				</div>
+			</articulo>
+			<article class="losCarteles__articulo">
+				<figure class="losCarteles__articulo__img">
+					<img src="'.$sistema_logo_4.'" alt="'.get_bloginfo("name").'" />
+				</figure>
+				<div class="losCarteles__articulo__contenedor">
+					<header class="losCarteles__articulo__header">
+						<h3>'.$sistema_titulo_4.'</h3>
+					</header>
+					<div class="losCarteles__articulo__contenido">
+						<p>'.$sistema_contenido_4.'</p>
+					</div>
+				</div>
+			</articulo>
+		';
 	}
 	echo '</div>';
 
@@ -140,14 +188,14 @@ get_header(); ?>
 		<div class="losCarteles">
 			<article class="losCarteles__articulo">
 				<figure class="losCarteles__articulo__img">
-					<?php the_post_thumbnail('custom-thumb-100-100');?>
+					<?php // the_post_thumbnail('custom-thumb-100-100');?>
 				</figure>
 				<div class="losCarteles__articulo__contenedor">
 					<header class="losCarteles__articulo__header">
 						<h3><?php the_title();?></h3>
 					</header>
 					<div class="losCarteles__articulo__contenido">
-						<?php the_content();?>
+						<?php // the_content();?>
 					</div>
 				</div>
 			</article>
