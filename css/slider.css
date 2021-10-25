@@ -403,7 +403,18 @@ textarea:focus {
   }
 }
 .losCarteles {
-  margin: 2em auto 0 auto;
+  margin: 2em auto;
+}
+.losCarteles__header {
+  color: #6dbcdb;
+}
+.losCarteles__header h1,
+.losCarteles__header h2,
+.losCarteles__header h3,
+.losCarteles__header h4,
+.losCarteles__header h5,
+.losCarteles__header h6 {
+  margin-top: 0;
 }
 .losCarteles__articulo {
   margin: 0.5em auto;

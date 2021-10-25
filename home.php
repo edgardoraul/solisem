@@ -94,6 +94,7 @@ get_header(); ?>
 		<!-- Fin del Slider -->
 
 
+	<div class="losCarteles">
 <?php
 	// Comienzo de los carteles de los sistemas
 	$sistema_1				= of_get_option( 'sistema_1', '' );
@@ -112,12 +113,11 @@ get_header(); ?>
 	$sistema_contenido_4	= of_get_option( 'sistema_contenido_4', '' );
 	$sistema_logo_4			= of_get_option( 'sistema_logo_4', '' );
 
-	echo '<div class="losCarteles">';
 	if($sistema_1)
 	{
 		echo '
 			<header>
-				<h2>'.$sistema_1.'</h2>
+				<h2 class="losCarteles__header">'.$sistema_1.'</h2>
 			</header>
 			<article class="losCarteles__articulo">
 				<figure class="losCarteles__articulo__img">
@@ -131,7 +131,7 @@ get_header(); ?>
 						<p>'.$sistema_contenido_1.'</p>
 					</div>
 				</div>
-			</articulo>
+			</article>
 			<article class="losCarteles__articulo">
 				<figure class="losCarteles__articulo__img">
 					<img src="'.$sistema_logo_2.'" alt="'.get_bloginfo("name").'" />
@@ -144,14 +144,14 @@ get_header(); ?>
 						<p>'.$sistema_contenido_2.'</p>
 					</div>
 				</div>
-			</articulo>
+			</article>
 		';
 	}
 	if($sistema_2)
 	{
 		echo '
 			<header>
-				<h2>'.$sistema_2.'</h2>
+				<h2 class="losCarteles__header">'.$sistema_2.'</h2>
 			</header>
 			<article class="losCarteles__articulo">
 				<figure class="losCarteles__articulo__img">
@@ -165,7 +165,7 @@ get_header(); ?>
 						<p>'.$sistema_contenido_3.'</p>
 					</div>
 				</div>
-			</articulo>
+			</article>
 			<article class="losCarteles__articulo">
 				<figure class="losCarteles__articulo__img">
 					<img src="'.$sistema_logo_4.'" alt="'.get_bloginfo("name").'" />
@@ -178,28 +178,12 @@ get_header(); ?>
 						<p>'.$sistema_contenido_4.'</p>
 					</div>
 				</div>
-			</articulo>
+			</article>
 		';
 	}
-	echo '</div>';
-
-?>
-        <!-- Comienzo de los carteles 
-		<div class="losCarteles">
-			<article class="losCarteles__articulo">
-				<figure class="losCarteles__articulo__img">
-					<?php // the_post_thumbnail('custom-thumb-100-100');?>
-				</figure>
-				<div class="losCarteles__articulo__contenedor">
-					<header class="losCarteles__articulo__header">
-						<h3><?php the_title();?></h3>
-					</header>
-					<div class="losCarteles__articulo__contenido">
-						<?php // the_content();?>
-					</div>
-				</div>
-			</article>
-		</div>-->
+	
+	?>
+	</div>
 
 		<!-- Fin de los Carteles -->
 
