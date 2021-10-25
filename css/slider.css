@@ -465,11 +465,39 @@ textarea:focus {
     display: inline-block;
   }
 }
+.losSegmentos {
+  margin: 2em 0;
+}
 .losSegmentos__wrapper {
-  border: 1px solid #fc4349;
+  align-content: space-between;
+  align-items: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: stretch;
 }
 .losSegmentos__articulo {
-  background-color: #7f8c8d;
+  flex: 1 1 33%;
+  padding: 0.5em;
+}
+.losSegmentos__articulo__header {
+  align-content: center;
+  align-items: center;
+  background-color: #6dbcdb;
+  border-radius: 0.5em;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5em;
+  min-height: 150px;
+  text-align: center;
+}
+.losSegmentos__articulo__header h1,
+.losSegmentos__articulo__header h2,
+.losSegmentos__articulo__header h3,
+.losSegmentos__articulo__header h4,
+.losSegmentos__articulo__header h5,
+.losSegmentos__articulo__header h6 {
+  color: #fff;
 }
 .owl-carousel .owl-wrapper:after {
   content: ".";

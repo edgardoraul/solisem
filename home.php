@@ -188,7 +188,7 @@ get_header(); ?>
 		<!-- Fin de los Carteles -->
 
 		
-		<!-- Comienzo de los Segementos -->
+		<!-- Comienzo de los Segmentos -->
 		<?php // WP_Query arguments
 		$args = array (
 			'post_type'		=> array( 'segmentos_post_type' ),
@@ -203,7 +203,12 @@ get_header(); ?>
 		// The Loop
 		if ( $segmentos_post_type_home->have_posts() )
 		{
-			echo '<div class="losSegmentos">';
+			echo '<section>';
+			echo '<div class="losSegmentos">
+					<header>
+						<h2>'.__('Segmentos de Operación', 'solisem').'</h2>
+					</header>
+					<div class="losSegmentos__wrapper">';
 			while ( $segmentos_post_type_home->have_posts() )
 			{
 				$segmentos_post_type_home->the_post();
@@ -211,9 +216,6 @@ get_header(); ?>
 				?>
 			
 			<article class="losSegmentos__articulo">
-				<figure class="losSegmentos__articulo__img">
-					<?php the_post_thumbnail('custom-thumb-100-100');?>
-				</figure>
 				<div class="losSegmentos__articulo__contenedor">
 					<header class="losSegmentos__articulo__header">
 						<h3><?php the_title();?></h3>
@@ -225,7 +227,7 @@ get_header(); ?>
 			</article>
 
 			<?php	}
-		echo "</div>";
+		echo "</div></div></section>";
 	} else {
 		echo '<div class="losSegmentos"><header><h2>No hay nada</h2></header></div>';
 		}
