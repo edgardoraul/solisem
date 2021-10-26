@@ -1,0 +1,32 @@
+// Contenido especial de la home
+.homeContenido
+
+	&__article
+		align-items: stretch
+		align-content: center
+		background-attachment: scroll
+		background-color: rojo_solisem
+		background-position: center center;
+		background-repeat: no-repeat
+		background-size: cover
+		border-radius: 0.25em
+		display: flex
+		min-height: 80vh
+		overflow: hidden
+		width: 100%
+	
+	&__contenido
+		background-color: celeste_solisem
+		color: blanco_puro
+		max-width: 50%
+		padding: 1em
+		font-size: 1.2em
+		display: flex
+		align-items: center
+		
+
+@media all and (min-width: $tableta)
+	.homeContenido
+		&__contenido
+			max-width: 25%
+			text-align: right

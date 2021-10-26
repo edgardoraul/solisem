@@ -184,10 +184,44 @@ get_header(); ?>
 	
 	?>
 	</div>
-
 		<!-- Fin de los Carteles -->
 
-		
+	<!-- Un cuadro con contenido y foto -->
+	<?php
+	$logotipo_options = of_get_option( 'logotipo_options', '' );
+	$contenido_home_options = of_get_option( 'contenido_home_options', '' );
+
+	if($logotipo_options)
+	{
+		echo '
+		<style type="text/css">
+		.homeContenido__article
+		{
+			background-image:url("'.$logotipo_options.'");
+		}
+		</style>
+		';
+	}
+	
+	if($contenido_home_options)
+	{
+		echo '
+		<div class="homeContenido">
+			<article class="homeContenido__article">
+				<div class="homeContenido__contenido">
+					<p>'.$contenido_home_options.'</p>
+				</div>
+			</article>
+		</div>
+		';
+	}
+	
+	?>
+	
+	<!-- fin del cuado de contenido y foto -->
+
+
+
 		<!-- Comienzo de los Segmentos -->
 		<?php // WP_Query arguments
 		$args = array (

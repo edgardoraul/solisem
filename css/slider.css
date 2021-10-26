@@ -509,6 +509,39 @@ textarea:focus {
     flex-basis: 30%;
   }
 }
+.homeContenido__article {
+  align-items: stretch;
+  align-content: center;
+  background-attachment: scroll;
+  background-color: #fc4349;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  border-radius: 0.25em;
+  display: flex;
+  min-height: 80vh;
+  overflow: hidden;
+  width: 100%;
+}
+.homeContenido__contenido {
+  background-color: #6dbcdb;
+  color: #fff;
+  max-width: 50%;
+  padding: 1em;
+  font-size: 1.2em;
+  display: flex;
+  align-items: center;
+}
+@media all and (min-width: 768px) {
+  .homeContenido__contenido {
+    max-width: 25%;
+    text-align: right;
+  }
+}
 .owl-carousel .owl-wrapper:after {
   content: ".";
   display: block;

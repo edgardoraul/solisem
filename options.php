@@ -37,15 +37,15 @@ function optionsframework_options()
 
 	// Cambio del logo
 	$options[]	=	array(
-	'name'		=>	__('Logotipo del Sitio Web', 'options_framework_theme'),
-	'desc'		=>	__('Selecciona el logo a mostrar en la web, tamaño 100px x 100px.', 'options_framework_theme'),
+	'name'		=>	__('Imagen de la oficina', 'options_framework_theme'),
+	'desc'		=>	__('Selecciona una foto grande de 1360x768px de mínimo.', 'options_framework_theme'),
 	'id'		=>	'logotipo_options',
 	'type'		=>	'upload');
 
 	// Titular del Portfolio de la home
 	$options[]	=	array(
-		'name'			=>	__('Titular del Portfolio de la home', 'options_framework_theme'),
-		'desc'			=>	__('Introduca un titular para el portfolio de la home.', 'options_framework_theme'),
+		'name'			=>	__('Titular que se desee mostrar', 'options_framework_theme'),
+		'desc'			=>	__('Introduca un titular importante.', 'options_framework_theme'),
 		'id'			=>	'titular_home_options',
 		'placeholder'	=>	__('Titular de ejemplo...', 'options_framework_theme'),
 		'class'			=>	'',
@@ -54,8 +54,8 @@ function optionsframework_options()
 
 	// Contenido o mensaje para el porfolio de la home
 	$options[]	=	array(
-		'name'			=>	__('Mensaje para el porfolio de la home', 'options_framework_theme'),
-		'desc'			=>	__('Introduzca un contenido o mensaje para el porfolio de la home.', 'options_framework_theme'),
+		'name'			=>	__('Mensaje importante a mostrar en la home', 'options_framework_theme'),
+		'desc'			=>	__('Introduzca un contenido o mensaje para la home.', 'options_framework_theme'),
 		'id'			=>	'contenido_home_options',
 		'placeholder'	=>	__('Contenido de ejemplo...', 'options_framework_theme'),
 		'class'			=>	'',
