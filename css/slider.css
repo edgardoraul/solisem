@@ -407,6 +407,7 @@ textarea:focus {
 }
 .losCarteles__header {
   color: #6dbcdb;
+  margin-top: 2em;
 }
 .losCarteles__header h1,
 .losCarteles__header h2,
@@ -424,15 +425,6 @@ textarea:focus {
   padding: 0 0.5em;
   vertical-align: middle;
   width: calc(100% - 100px - 1em);
-}
-.losCarteles__articulo__header h1,
-.losCarteles__articulo__header h2,
-.losCarteles__articulo__header h3,
-.losCarteles__articulo__header h4,
-.losCarteles__articulo__header h5,
-.losCarteles__articulo__header h6 {
-  font-size: 1.2em;
-  font-weight: bold;
 }
 .losCarteles__articulo__img {
   display: inline-block;
@@ -466,30 +458,34 @@ textarea:focus {
   }
 }
 .losSegmentos {
-  margin: 2em 0;
+  margin: 3em 0;
 }
 .losSegmentos__wrapper {
   align-content: space-between;
   align-items: stretch;
+  flex-direction: column;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
   justify-content: stretch;
 }
 .losSegmentos__articulo {
-  flex: 1 1 33%;
-  padding: 0.5em;
+  flex: 1 1 auto;
+  padding: 0.5em 0;
 }
 .losSegmentos__articulo__header {
   align-content: center;
   align-items: center;
   background-color: #6dbcdb;
-  border-radius: 0.5em;
+  border-radius: 0.25em;
   display: flex;
   justify-content: center;
   margin-bottom: 1.5em;
   min-height: 150px;
   text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+.losSegmentos__articulo__header:hover {
+  background-color: #fc4349;
 }
 .losSegmentos__articulo__header h1,
 .losSegmentos__articulo__header h2,
@@ -498,6 +494,20 @@ textarea:focus {
 .losSegmentos__articulo__header h5,
 .losSegmentos__articulo__header h6 {
   color: #fff;
+  text-shadow: 0px -1px 0px rgba(0,0,0,0.5);
+  -o-text-shadow: 0px -1px 0px rgba(0,0,0,0.5);
+  -ms-text-shadow: 0px -1px 0px rgba(0,0,0,0.5);
+  -moz-text-shadow: 0px -1px 0px rgba(0,0,0,0.5);
+  -webkit-text-shadow: 0px -1px 0px rgba(0,0,0,0.5);
+}
+@media all and (min-width: 600px) {
+  .losSegmentos__wrapper {
+    flex-direction: row;
+    gap: 1em;
+  }
+  .losSegmentos__articulo {
+    flex-basis: 30%;
+  }
 }
 .owl-carousel .owl-wrapper:after {
   content: ".";

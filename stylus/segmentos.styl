@@ -1,32 +1,46 @@
 // Los segmentos que trata la industria dedicada
 .losSegmentos
-	margin: 2em 0
-
-	&__wrapper
+	margin: 3em 0
+	
+	&__wrapper 
 		align-content: space-between
 		align-items: stretch
+		flex-direction: column
 		display: flex
 		flex-wrap: wrap
-		flex-direction: row
 		justify-content: stretch
 	
 	&__articulo
-		flex: 1 1 33%
-		padding: 0.5em
+		flex: 1 1 auto
+		padding: 0.5em 0
 
 		&__header
 			align-content: center
 			align-items: center
 			background-color: celeste_solisem
-			border-radius: 0.5em
+			border-radius: 0.25em
 			display: flex
 			justify-content: center
 			margin-bottom: 1.5em
 			min-height: 150px
 			text-align: center
+			transition_comun()
+
+			&:hover
+				background-color: rojo_solisem
 
 			h1, h2, h3, h4, h5, h6
 				color: blanco_puro
+				text-shadow_lindo()
+
+@media all and ( min-width: ( $mobile * 1.25 ) )
+	.losSegmentos
+		&__wrapper
+			flex-direction: row
+			gap: 1em
+		
+		&__articulo
+			flex-basis: 30%
 
 		
 		

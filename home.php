@@ -206,19 +206,24 @@ get_header(); ?>
 			echo '<section>';
 			echo '<div class="losSegmentos">
 					<header>
-						<h2>'.__('Segmentos de Operación', 'solisem').'</h2>
+						<h2>'.__('Segmentos de Operación', 'solisem').'</h2></a>
 					</header>
 					<div class="losSegmentos__wrapper">';
 			while ( $segmentos_post_type_home->have_posts() )
 			{
 				$segmentos_post_type_home->the_post();
-				
+
+				// Extrayendo información del metabox con el enlace a la página elegida 
+				$my_custom_field = get_post_custom('_wporg_meta_key');
+				echo $my_custom_field[0];
 				?>
 			
 			<article class="losSegmentos__articulo">
 				<div class="losSegmentos__articulo__contenedor">
 					<header class="losSegmentos__articulo__header">
-						<h3><?php the_title();?></h3>
+						<a href="<?php the_permalink();?>">
+							<h3><?php the_title();?></h3>
+						</a>
 					</header>
 					<div class="losSegmentos__articulo__contenido">
 						<?php the_content();?>
