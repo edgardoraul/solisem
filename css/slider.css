@@ -494,6 +494,7 @@ textarea:focus {
 .losSegmentos__articulo__header h5,
 .losSegmentos__articulo__header h6 {
   color: #fff;
+  font-weight: bold;
   text-shadow: 0px -1px 0px rgba(0,0,0,0.5);
   -o-text-shadow: 0px -1px 0px rgba(0,0,0,0.5);
   -ms-text-shadow: 0px -1px 0px rgba(0,0,0,0.5);
@@ -508,6 +509,9 @@ textarea:focus {
   .losSegmentos__articulo {
     flex-basis: 30%;
   }
+}
+.home .entry-title {
+  display: none;
 }
 .homeContenido__article {
   align-items: stretch;
