@@ -204,25 +204,25 @@ function bld_personalizar_footer_storefront()
 		// Facebook
 		if($facebook_options)
 		{
-			echo '<a href="//' . $facebook_options . '" title="Facebook" target="_blank"><i class="fab fa-facebook-square fa-2x"></i></a> ';
+			echo '<a href="//' . $facebook_options . '" title="Facebook" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a> ';
 		}
 
 		// Instagram
 		if($instagram_options)
 		{
-			echo '<a href="//www.instagram.com/' . $instagram_options . '" title="Instagram" target="_blank"><i class="fab fa-instagram-square fa-2x"></i></a> ';
+			echo '<a href="//www.instagram.com/' . $instagram_options . '" title="Instagram" target="_blank"><i class="fab fa-instagram-square fa-3x"></i></a> ';
 		}
 
 		// Twitter
 		if($twitter_options)
 		{
-			echo '<a href="//www.twitter.com/' . $twitter_options . '" title="Twitter" target="_blank"><i class="fab fa-twitter-square fa-2x"></i></a> ';
+			echo '<a href="//' . $twitter_options . '" title="Twitter" target="_blank"><i class="fab fa-twitter-square fa-3x"></i></a> ';
 		}
 
 		// Linkedin
 		if($linkedin_options)
 		{
-			echo '<a href="//' . $linkedin_options . '" title="Linkedin" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a> ';
+			echo '<a href="//' . $linkedin_options . '" title="Linkedin" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a> ';
 		}
 		?>		
 		
