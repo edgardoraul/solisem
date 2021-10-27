@@ -682,6 +682,44 @@ textarea:focus {
     text-align: right;
   }
 }
+.formularioContacto {
+  margin: 1em auto;
+}
+.formularioContacto input[type="text"],
+.formularioContacto input[type="tel"],
+.formularioContacto input[type="email"] {
+  width: 100%;
+}
+.formularioContacto textarea {
+  height: 180px;
+}
+@media all and (min-width: 768px) {
+  .formularioContacto {
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+    -webkit-column-gap: 2em;
+    -moz-column-gap: 2em;
+    column-gap: 2em;
+  }
+  .formularioContacto input[type="submit"],
+  .formularioContacto input[type="reset"],
+  .formularioContacto button[type="submit"],
+  .formularioContacto button[type="reset"] {
+    float: right;
+  }
+}
+.nuestrosValores {
+  position: relative;
+}
+.nuestrosValores__contenido {
+  background-color: rgba(0,0,0,0.5);
+  left: 0;
+  margin: 1em;
+  padding: 1em;
+  position: absolute;
+  top: 0;
+}
 .owl-carousel .owl-wrapper:after {
   content: ".";
   display: block;

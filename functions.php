@@ -133,18 +133,26 @@ function bld_personalizar_footer_storefront()
 
 	if($googlemaps_options)
 	{
-		echo '<h2>Ubicación</h2>' . $googlemaps_options;
+		echo '<h2>'.__('Ubicación', 'solisem').'</h2>' . $googlemaps_options;
 	}
-
+	
+	
 	if($email_options)
 	{
-		echo '<h2>Contacto:</h2><p><i class="fas fa-envelope-square fa-lg"></i> ' . $email_options;
-	
+		// El título
+		echo '<h2>'.__('Contacto:', 'solisem').'</h2>';
+		
+		// El formulario
+		echo '<div class="formularioContacto">'. do_shortcode( '[contact-form-7 id="135" title="Formulario de contacto"]' ). '</div>';
+		
+		// El email
+		echo '<p><i class="fas fa-envelope-square fa-lg"></i> ' . $email_options;
+		
 		if($telefono_options)
 		{
 			echo '<br /><i class="fas fa-phone-square-alt fa-lg"></i> ' . $telefono_options;
 		}
-	
+		
 		if($celular_options)
 		{
 			// Se oculta en desktop
@@ -156,9 +164,10 @@ function bld_personalizar_footer_storefront()
 		echo '</p>';
 	}
 
+	
 	if($direccion_options)
 	{
-		echo '<h2>Showroom:</h2><p>' . $direccion_options;
+		echo '<h2>'.__('Showroom:', 'solisem').'</h2><p>' . $direccion_options;
 		
 		if($localidad_options)
 		{
@@ -192,7 +201,7 @@ function bld_personalizar_footer_storefront()
 
 	if($horario_options)
 	{
-		echo '<h2>Horario de Atención:</h2><p>' . $horario_options . '</p>';
+		echo '<h2>'.__('Horario de Atención:', 'solisem').'</h2><p>' . $horario_options . '</p>';
 	}
 	
 	?>

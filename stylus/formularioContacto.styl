@@ -1,0 +1,25 @@
+.formularioContacto
+	margin: 1em auto
+	
+	input[type="text"]
+	input[type="tel"]
+	input[type="email"]
+		width: 100%
+
+	
+	textarea
+		height: 180px
+	
+
+
+
+@media all and (min-width: $tableta)
+	.formularioContacto
+		column-count: 2
+		column-gap: 2em
+	
+		input[type="submit"]
+		input[type="reset"]
+		button[type="submit"]
+		button[type="reset"]
+			float: right

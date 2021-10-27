@@ -286,6 +286,7 @@ get_header(); ?>
 
 				get_template_part( 'content', 'page' );
 
+
 				/**
 				 * Functions hooked in to storefront_page_after action
 				 *
@@ -293,8 +294,41 @@ get_header(); ?>
 				 */
 				do_action( 'storefront_page_after' );
 
-			endwhile; // End of the loop.
-			?>
+			endwhile;
+			
+
+
+$args = array(
+	'post_type'      => 'page',
+	'posts_per_page' => 1,
+	'post_parent'    => 'nuestros-valores',
+	'order'          => 'ASC',
+	'orderby'        => 'menu_order'
+ );
+
+$parent = new WP_Query( $args );
+
+if ( $parent->have_posts() ) : ?>
+
+	<?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
+		
+		<div id="parent-<?php the_ID(); ?>" class="nuestrosValores">
+			<div class="nuestrosValores__img">
+				<?php if( has_post_thumbnail() )
+					echo get_the_post_thumbnail('custom-thumb-1200-500');
+				;?>
+			</div>
+			<div class="nuestrosValores__contenido">
+				<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+	
+				<?php the_content(); ?>
+			</div>
+		</div>
+
+	<?php endwhile; ?>
+
+<?php endif; wp_reset_postdata(); ?>
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
