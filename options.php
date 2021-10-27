@@ -44,7 +44,7 @@ function optionsframework_options()
 
 	// Titular del Portfolio de la home
 	$options[]	=	array(
-		'name'			=>	__('Titular de Nuestros Valores y Misión', 'options_framework_theme'),
+		'name'			=>	__('Titular que se desee mostrar', 'options_framework_theme'),
 		'desc'			=>	__('Introduca un titular importante.', 'options_framework_theme'),
 		'id'			=>	'titular_home_options',
 		'placeholder'	=>	__('Titular de ejemplo...', 'options_framework_theme'),
@@ -52,11 +52,39 @@ function optionsframework_options()
 		'type'			=>	'text',
 	);
 
-	// Contenido o mensaje para el porfolio de la home
+	// Contenido o mensaje
 	$options[]	=	array(
 		'name'			=>	__('Mensaje importante a mostrar en la home', 'options_framework_theme'),
 		'desc'			=>	__('Introduzca un contenido o mensaje para la home.', 'options_framework_theme'),
 		'id'			=>	'contenido_home_options',
+		'placeholder'	=>	__('Contenido de ejemplo...', 'options_framework_theme'),
+		'class'			=>	'',
+		'type'			=>	'textarea',
+	);
+
+
+	// Titular de Nuestros Valores
+	$options[]	=	array(
+		'name'			=>	__('Titular de Nuestros Valores', 'options_framework_theme'),
+		'desc'			=>	__('Introduca un titular importante.', 'options_framework_theme'),
+		'id'			=>	'titular_nuestros_valores',
+		'placeholder'	=>	__('Titular de ejemplo...', 'options_framework_theme'),
+		'class'			=>	'',
+		'type'			=>	'text',
+	);
+	
+	// Imagen de fondo para nuestros valores
+	$options[]	=	array(
+		'name'		=>	__('Imagen de fondo para mostrar en Nuestros Valores', 'options_framework_theme'),
+		'desc'		=>	__('Selecciona una foto grande de 1360x768px de mínimo.', 'options_framework_theme'),
+		'id'		=>	'logotipo_nuestros_valores',
+		'type'		=>	'upload');
+	
+	// Mensaje de Visión, Valores, Misión
+	$options[]	=	array(
+		'name'			=>	__('Mensaje de Visión, Valores, Misión', 'options_framework_theme'),
+		'desc'			=>	__('Introduzca un contenido.', 'options_framework_theme'),
+		'id'			=>	'contenido_nuestros_valores',
 		'class'			=>	'',
 		'type'			=>	'editor',
 	);

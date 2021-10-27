@@ -678,8 +678,11 @@ textarea:focus {
 }
 @media all and (min-width: 768px) {
   .homeContenido__contenido {
-    max-width: 25%;
+    width: 25%;
     text-align: right;
+  }
+  .homeContenido__contenido * {
+    width: 100%;
   }
 }
 .formularioContacto {
@@ -709,16 +712,24 @@ textarea:focus {
     float: right;
   }
 }
-.nuestrosValores {
+.nuestros_valores {
+  background-color: #9c8f89;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -o-background-size: cover;
+  -ms-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
   position: relative;
+  padding: 2em;
 }
-.nuestrosValores__contenido {
-  background-color: rgba(0,0,0,0.5);
-  left: 0;
-  margin: 1em;
+.nuestros_valores__contenido {
+  background-color: rgba(0,0,0,0.25);
   padding: 1em;
-  position: absolute;
-  top: 0;
+}
+.nuestros_valores__contenido * {
+  color: #fff;
 }
 .owl-carousel .owl-wrapper:after {
   content: ".";

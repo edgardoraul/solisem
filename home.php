@@ -277,7 +277,33 @@ get_header(); ?>
 <!-- Fin de los segmentos -->
 
 <?php
-			echo "<br />";
+
+	// El sector de los valores comerciales y esas vainas
+	$titular_nuestros_valores	= of_get_option( 'titular_nuestros_valores', '' );
+	$logotipo_nuestros_valores	= of_get_option('logotipo_nuestros_valores', '');
+	$contenido_nuestros_valores	= of_get_option('contenido_nuestros_valores', '');
+
+	if($titular_nuestros_valores)
+	{
+		echo '
+		<style type="text/css">
+		.nuestros_valores
+		{
+			background-image: url("'.$logotipo_nuestros_valores.'");
+		}
+		</style>
+		<div class="nuestros_valores">
+			<div class="nuestros_valores__contenido">
+				<h2>'.$titular_nuestros_valores.'</h2>
+				<div>'.$contenido_nuestros_valores.'</div>
+			</div>
+		</div>
+		';
+	}
+	
+	echo "<br />";
+		
+		// El loop normal
 			while ( have_posts() ) :
 				the_post();
 				
@@ -294,41 +320,10 @@ get_header(); ?>
 				do_action( 'storefront_page_after' );
 
 			endwhile;
-			
-
-
-$args = array(
-	'post_type'      => 'page',
-	'posts_per_page' => 1,
-	'post_parent'    => 'nuestros-valores',
-	'order'          => 'ASC',
-	'orderby'        => 'menu_order'
- );
-
-$parent = new WP_Query( $args );
-
-if ( $parent->have_posts() ) : ?>
-
-	<?php while ( $parent->have_posts() ) : $parent->the_post(); ?>
-		
-		<div id="parent-<?php the_ID(); ?>" class="nuestrosValores">
-			<div class="nuestrosValores__img">
-				<?php if( has_post_thumbnail() )
-					echo get_the_post_thumbnail('custom-thumb-1200-500');
-				;?>
-			</div>
-			<div class="nuestrosValores__contenido">
-				<h3><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a></h3>
+			// Restore original Post Data
+		wp_reset_postdata();
 	
-				<?php the_content(); ?>
-			</div>
-		</div>
-
-	<?php endwhile; ?>
-
-<?php endif; wp_reset_postdata(); ?>
-
-
+	?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
