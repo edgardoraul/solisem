@@ -227,8 +227,7 @@ get_header(); ?>
 		$args = array (
 			'post_type'		=> array( 'segmentos_post_type' ),
 			'order'			=> 'ASC',
-			'orderby'		=> 'menu_order',
-			'hierachical'	=> true,
+			'orderby'		=> 'menu_order'
 		);
 		
 		// The Query

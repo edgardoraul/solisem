@@ -44,7 +44,7 @@ function optionsframework_options()
 
 	// Titular del Portfolio de la home
 	$options[]	=	array(
-		'name'			=>	__('Titular que se desee mostrar', 'options_framework_theme'),
+		'name'			=>	__('Titular de Nuestros Valores y Misión', 'options_framework_theme'),
 		'desc'			=>	__('Introduca un titular importante.', 'options_framework_theme'),
 		'id'			=>	'titular_home_options',
 		'placeholder'	=>	__('Titular de ejemplo...', 'options_framework_theme'),
@@ -57,9 +57,8 @@ function optionsframework_options()
 		'name'			=>	__('Mensaje importante a mostrar en la home', 'options_framework_theme'),
 		'desc'			=>	__('Introduzca un contenido o mensaje para la home.', 'options_framework_theme'),
 		'id'			=>	'contenido_home_options',
-		'placeholder'	=>	__('Contenido de ejemplo...', 'options_framework_theme'),
 		'class'			=>	'',
-		'type'			=>	'textarea',
+		'type'			=>	'editor',
 	);
 
 	// Meta: keywords
@@ -141,8 +140,8 @@ function optionsframework_options()
 
 		// Primer titulo del primer sistema
 		$options[]	=	array(
-			'name'			=>	__('Título para el sistema 1', 'options_framework_theme'),
-			'desc'			=>	__('Introduzca un título descriptivo.', 'options_framework_theme'),
+			'name'			=>	__('Subtítulo para el sistema 1', 'options_framework_theme'),
+			'desc'			=>	__('Introduzca un subtítulo descriptivo.', 'options_framework_theme'),
 			'id'			=>	'sistema_titulo_1',
 			'placeholder'	=>	__('Sistemas tipo xxx...', 'options_framework_theme'),
 			'class'			=>	'',
@@ -169,7 +168,7 @@ function optionsframework_options()
 
 		// Primer titulo del segundo sistema
 		$options[]	=	array(
-			'name'			=>	__('Título para el sistema 2', 'options_framework_theme'),
+			'name'			=>	__('Subtítulo para el sistema 2', 'options_framework_theme'),
 			'desc'			=>	__('Introduzca un título descriptivo.', 'options_framework_theme'),
 			'id'			=>	'sistema_titulo_2',
 			'placeholder'	=>	__('Sistemas tipo xxx...', 'options_framework_theme'),
@@ -207,7 +206,7 @@ function optionsframework_options()
 
 		// Primer titulo del primer sistema
 		$options[]	=	array(
-			'name'			=>	__('Título para el sistema 3', 'options_framework_theme'),
+			'name'			=>	__('Subítulo para el sistema 3', 'options_framework_theme'),
 			'desc'			=>	__('Introduzca un título descriptivo.', 'options_framework_theme'),
 			'id'			=>	'sistema_titulo_3',
 			'placeholder'	=>	__('Sistemas tipo xxx...', 'options_framework_theme'),
@@ -235,7 +234,7 @@ function optionsframework_options()
 
 		// Primer titulo del segundo sistema
 		$options[]	=	array(
-			'name'			=>	__('Título para el sistema 4', 'options_framework_theme'),
+			'name'			=>	__('Subtítulo para el sistema 4', 'options_framework_theme'),
 			'desc'			=>	__('Introduzca un título descriptivo.', 'options_framework_theme'),
 			'id'			=>	'sistema_titulo_4',
 			'placeholder'	=>	__('Sistemas tipo xxx...', 'options_framework_theme'),
