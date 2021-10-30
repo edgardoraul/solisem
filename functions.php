@@ -55,7 +55,7 @@ require_once "includes/06._sitemap.php";
 require_once "includes/09._thumbnails.php";
 
 // Minificación del html
-// require_once "includes/20._minificacion.php";
+require_once "includes/20._minificacion.php";
 
 // Los segmentos centrales de la home
 require_once "includes/21._segmentos.php";
@@ -176,6 +176,14 @@ function change_wp_login_title()
 }
 add_filter( 'login_headertext', 'change_wp_login_title' );
 
+// Remover clases e ids automáticos de los menúes
+add_filter('nav_menu_css_class', 'my_css_attributes_filter', 100, 1);
+add_filter('nav_menu_item_id', 'my_css_attributes_filter', 100, 1);
+add_filter('page_css_class', 'my_css_attributes_filter', 100, 1);
+function my_css_attributes_filter( $var )
+{
+	return is_array( $var ) ? array_intersect( $var, array( 'current-menu-item', 'current_page_item' ) ) : '';
+};
 
 // Ocultar los errores en la pantalla de Inicio de sesión de WordPress
 function no__rrors_please()

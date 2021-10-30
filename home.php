@@ -239,7 +239,7 @@ get_header(); ?>
 			echo '<section>';
 			echo '<div class="losSegmentos">
 					<header>
-						<h2>'.__('Segmentos de Operación', 'solisem').'</h2></a>
+						<h2>'.__('Segmentos de Operación', 'solisem').'</h2>
 					</header>
 					<div class="losSegmentos__wrapper">';
 			while ( $segmentos_post_type_home->have_posts() )
