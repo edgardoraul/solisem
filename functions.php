@@ -83,6 +83,99 @@ function stop_guessing( $url )
 	return $url;
 }
 
+// Deshabilitar Iconos Emoji
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+add_filter( 'emoji_svg_url', '__return_false' );
+
+// Remover la API REST
+function remove_api ()
+{
+remove_action( 'wp_head', 'rest_output_link_wp_head', 10 );
+remove_action( 'wp_head', 'wp_oembed_add_discovery_links', 10 );
+remove_action( 'template_redirect', 'rest_output_link_header', 11, 0 );
+}
+add_action( 'after_setup_theme', 'remove_api' );
+
+// Remover cosas raras de Wordpress
+remove_action( 'wp_head', 'wp_resource_hints', 2 );
+remove_action( 'wp_head', 'dns-prefetch' );
+
+// Remover clases automáticas del the_post_thumbnail
+function the_post_thumbnail_remove_class( $output )
+{
+	$output = preg_replace( '/class=".*?"/', '', $output );
+	return $output;
+}
+add_filter( 'post_thumbnail_html', 'the_post_thumbnail_remove_class'  );
+
+// Remover atributos de ancho y alto de las imágenes insertadas
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to__ditor', 'remove_width_attribute', 10 );
+function remove_width_attribute( $html )
+{
+	$html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+	return $html;
+};
+
+// Desactivar el script de embebidos
+function my_deregister_scripts()
+{
+	wp_deregister_script( 'wp-embed' );
+}
+add_action( 'wp_footer', 'my_deregister_scripts' );
+
+// Cambiar el logo del login y la url del mismo y el título
+function custom_login_logo()
+{
+	// echo '<link rel="shortcut icon" type="image/x-icon" href="' . get_stylesheet_directory_uri() . '/img/favicon.png" />';
+	echo '<style type="text/css">
+		body.login
+		{
+			background: #dddddd !important;
+			height: 100% !important;
+		}
+		h1
+		{
+			padding-top: 20px !important;
+		}
+		h1 a
+		{
+			background:  #ffffff url(' . get_bloginfo('stylesheet_directory') . '/img/logo.png) center center no-repeat !important;
+			background-size: cover !important;
+			border-left: 4px solid #FC4349;
+			height: 100px !important;
+			overflow: hidden !important;
+			width: 100% !important;
+		}
+		div#login
+		{
+			padding: 0 !important;
+		}
+		.message, #loginform, h1 a
+		{
+			border-radius: 5px;
+			-moz-border-radius: 5px;
+			-webkit-border-radius: 5px;
+		}
+		div.anr_captcha_field
+		{
+			margin-bottom: 1em !important;
+		}
+		</style>';
+};
+add_action( 'login_head', 'custom_login_logo', 1 );
+function the_url( $url )
+{
+	return get_bloginfo( 'url' );
+}
+add_filter( 'login_headerurl', 'the_url' );
+function change_wp_login_title()
+{
+	return get_option('blogname');
+}
+add_filter( 'login_headertext', 'change_wp_login_title' );
+
 
 // Ocultar los errores en la pantalla de Inicio de sesión de WordPress
 function no__rrors_please()
