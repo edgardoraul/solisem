@@ -54,12 +54,13 @@ function segmentos_home() {
 }
 add_action( 'init', 'segmentos_home', 0 );
 
+/*
 // Un metabox simple para enlazar estos CPT a ciertas páginas
-abstract class WPOrg_Meta_Box {
-	/**
-	 * Set up and add the meta box.
-	 */
-	public static function add() {
+abstract class WPOrg_Meta_Box
+{
+	// Set up and add the meta box.
+	public static function add()
+	{
 		$screens = [ 'segmentos_post_type' ];
 		foreach ( $screens as $screen )
 		{
@@ -81,11 +82,10 @@ abstract class WPOrg_Meta_Box {
 	}
  
  
-	/**
-	 * Save the meta box selections.
-	 *
-	 * @param int $post_id  The post ID.
-	 */
+
+	// Save the meta box selections.
+	// @param int $post_id  The post ID.
+
 	public static function save( int $post_id )
 	{
 		if ( array_key_exists( 'wporg_field', $_POST ) )
@@ -99,27 +99,25 @@ abstract class WPOrg_Meta_Box {
 	}
  
  
-	/**
-	 * Display the meta box HTML to the user.
-	 *
-	 * @param \WP_Post $post   Post object.
-	 */
+	// 
+	//   Display the meta box HTML to the user.
+	//  
+	//   @param WP_Post $post   Post object.
+	// 
 	public static function html( $post )
 	{
 		$value = get_post_meta( $post->ID, '_wporg_meta_key', true );
 
 		// Almacenamos las páginas de wordpress
 		$options_pages = array();
-		$options_pages_obj = get_pages('sort_column=post_parent,menu_order');
-		?>
+		$options_pages_obj = get_pages('sort_column=post_parent,menu_order');?>
 		<label for="wporg_field"><?php __('Seleccione una página de destino', 'solisem');?></label>
 		<select name="wporg_field" id="wporg_field" class="postbox">
 			<?php
 			foreach ($options_pages_obj as $page)
 			{
 				echo '<option value="'.$options_pages[$page->ID] = $page->ID.'">'.$page->post_title.'</option>';
-			};
-			?>
+			};?>
 		</select>
 		<?php
 	}
@@ -127,5 +125,5 @@ abstract class WPOrg_Meta_Box {
  
 add_action( 'add_meta_boxes', [ 'WPOrg_Meta_Box', 'add' ] );
 add_action( 'save_post', [ 'WPOrg_Meta_Box', 'save' ] );
-
+*/
 ;?>

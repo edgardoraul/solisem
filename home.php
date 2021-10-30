@@ -247,8 +247,8 @@ get_header(); ?>
 				$segmentos_post_type_home->the_post();
 
 				// Extrayendo información del metabox con el enlace a la página elegida 
-				$my_custom_field = get_post_custom('_wporg_meta_key');
-				echo $my_custom_field[0];
+				// $my_custom_field = get_post_custom('_wporg_meta_key');
+				// echo $my_custom_field;
 				?>
 			
 			<article class="losSegmentos__articulo">

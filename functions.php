@@ -133,24 +133,31 @@ function bld_personalizar_footer_storefront()
 
 	if($googlemaps_options)
 	{
-		echo '<h2>'.__('Ubicación', 'solisem').'</h2>' . $googlemaps_options;
+		if( is_page('quienes-somos') || is_home() || is_front_page() )
+		{
+			echo '<h2>'.__('Ubicación', 'solisem').'</h2>' . $googlemaps_options;
+		}
 	}
 	
 	
 	if($email_options)
 	{
 		// El título
+		echo '<br /><br /><br />';
 		echo '<h2>'.__('Contacto:', 'solisem').'</h2>';
 		
 		// El formulario
-		echo '<div class="formularioContacto">'. do_shortcode( '[contact-form-7 id="135" title="Formulario de contacto"]' ). '</div>';
+		if( is_page('quienes-somos') || is_home() || is_front_page() )
+		{
+			echo '<div class="formularioContacto">'. do_shortcode( '[contact-form-7 id="135" title="Formulario de contacto"]' ). '</div>';
+		}
 		
 		// El email
 		echo '<p><i class="fas fa-envelope-square fa-lg"></i> ' . $email_options;
 		
 		if($telefono_options)
 		{
-			echo '<br /><i class="fas fa-phone-square-alt fa-lg"></i> ' . $telefono_options;
+			echo '<br /><br /><i class="fas fa-phone-square-alt fa-lg"></i> ' . $telefono_options . '<br />';
 		}
 		
 		if($celular_options)
