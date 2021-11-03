@@ -189,7 +189,7 @@ function simone_set_image_transient( $post_id )
 		'custom-thumb-2100-x'		=>	$custom_thumb_2100_x[0],
 
 		// Atributo alt=""
-		'thumb_alt'      => $alt_text
+		'thumb_alt'      => $alt_text ? $alt_text : get_bloginfo('name')
 	);
 
 	// Setear el transiente para que funcione

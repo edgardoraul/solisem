@@ -34,7 +34,7 @@ function segmentos_home() {
 		'label'                 => __( 'Segmento', 'solisem' ),
 		'description'           => __( 'Segmentos de la home', 'solisem' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'page-attributes', ),
+		'supports'              => array( 'title', 'editor', 'page-attributes', 'thumbnail'),
 		'hierarchical'          => true,
 		'public'                => true,
 		'show_ui'               => true,
