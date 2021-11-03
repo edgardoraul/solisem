@@ -125,6 +125,11 @@ get_header(); ?>
 			<header>
 				<h2 class="losCarteles__header">'.$sistema_1.'</h2>
 			</header>
+			';
+
+		if($sistema_logo_1)
+		{
+			echo '
 			<article class="losCarteles__articulo">
 				<figure class="losCarteles__articulo__img">
 					<img src="'.$sistema_logo_1.'" alt="'.get_bloginfo("name").'" />
@@ -138,6 +143,12 @@ get_header(); ?>
 					</div>
 				</div>
 			</article>
+			';
+		}
+
+		if($sistema_logo_2)
+		{
+			echo '
 			<article class="losCarteles__articulo">
 				<figure class="losCarteles__articulo__img">
 					<img src="'.$sistema_logo_2.'" alt="'.get_bloginfo("name").'" />
@@ -151,6 +162,12 @@ get_header(); ?>
 					</div>
 				</div>
 			</article>
+			';
+		}
+
+		if($sistema_logo_33)
+		{
+			echo '
 			<article class="losCarteles__articulo">
 				<figure class="losCarteles__articulo__img">
 					<img src="'.$sistema_logo_33.'" alt="'.get_bloginfo("name").'" />
@@ -164,14 +181,21 @@ get_header(); ?>
 					</div>
 				</div>
 			</article>
-		';
+			';
+		}
 	}
+
 	if($sistema_2)
 	{
 		echo '
 			<header>
 				<h2 class="losCarteles__header">'.$sistema_2.'</h2>
 			</header>
+			';
+		
+		if($sistema_logo_3)
+		{
+			echo '
 			<article class="losCarteles__articulo">
 				<figure class="losCarteles__articulo__img">
 					<img src="'.$sistema_logo_3.'" alt="'.get_bloginfo("name").'" />
@@ -185,6 +209,11 @@ get_header(); ?>
 					</div>
 				</div>
 			</article>
+			';
+		}
+		if($sistema_logo_4)
+		{
+			echo '
 			<article class="losCarteles__articulo">
 				<figure class="losCarteles__articulo__img">
 					<img src="'.$sistema_logo_4.'" alt="'.get_bloginfo("name").'" />
@@ -198,6 +227,12 @@ get_header(); ?>
 					</div>
 				</div>
 			</article>
+			';
+		}
+		
+		if($sistema_logo_44)
+		{
+			echo '
 			<article class="losCarteles__articulo">
 				<figure class="losCarteles__articulo__img">
 					<img src="'.$sistema_logo_44.'" alt="'.get_bloginfo("name").'" />
@@ -211,7 +246,8 @@ get_header(); ?>
 					</div>
 				</div>
 			</article>
-		';
+			';
+		}
 	}
 	
 	?>
@@ -361,11 +397,6 @@ get_header(); ?>
 
 <?php
 
-// Carga de scripts jquery para el slider
-wp_enqueue_script( 'script_jquery', get_stylesheet_directory_uri() . '/js/jquery-1.12.4.min.js', array ( 'jquery' ), '1.12.4', true);
-
-// Carga de los scripts de slider y utilizades como el gotop y fancybox
-wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/scripts.min.js', array ( 'jquery' ), '1.0', true);
 
 do_action( 'storefront_sidebar' );
 get_footer();

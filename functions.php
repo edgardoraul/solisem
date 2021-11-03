@@ -55,7 +55,7 @@ require_once "includes/06._sitemap.php";
 require_once "includes/09._thumbnails.php";
 
 // Minificación del html
-require_once "includes/20._minificacion.php";
+// require_once "includes/20._minificacion.php";
 
 // Los segmentos centrales de la home
 require_once "includes/21._segmentos.php";
@@ -226,9 +226,7 @@ function bld_personalizar_footer_storefront()
 
 
 ?>
-<div class="site-info">
-		
-		
+<div class="site-info">	
 		
 	<?php
 
@@ -341,22 +339,29 @@ function bld_personalizar_footer_storefront()
 		{
 			echo '<a href="//' . $linkedin_options . '" title="Linkedin" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a> ';
 		}
+		
 		?>		
 		
+		
 	</div>
-
+	
 	<!-- Los cŕeditos -->
 	<div class="align-center separador">
 		<h2>&copy; <?php echo get_the_date( 'Y' ) . ' ' . get_bloginfo( 'name' ) ; ?></h2>
 	</div>
-
-
+	
+	
 	<!-- Ir hacia arriba -->
 	<span id="ir_arriba" class="gotop">
 		<a href="#" title="Ir arriba">&UpArrow;</a>
 	</span>
-
+	
 </div>
 <?php }
+// Carga de scripts jquery para el slider
+wp_enqueue_script( 'script_jquery', get_stylesheet_directory_uri() . '/js/jquery-1.12.4.min.js', array ( 'jquery' ), '1.12.4', true);
+
+// Carga de los scripts de slider y utilizades como el gotop y fancybox
+wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/scripts.min.js', array ( 'jquery' ), '1.0', true);
 
 ?>
