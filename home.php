@@ -104,6 +104,9 @@ get_header(); ?>
 	$sistema_titulo_2		= of_get_option( 'sistema_titulo_2', '' );
 	$sistema_contenido_2	= of_get_option( 'sistema_contenido_2', '' );
 	$sistema_logo_2			= of_get_option( 'sistema_logo_2', '' );
+	$sistema_titulo_33		= of_get_option( 'sistema_titulo_33', '' );
+	$sistema_contenido_33	= of_get_option( 'sistema_contenido_33', '' );
+	$sistema_logo_33		= of_get_option( 'sistema_logo_33', '' );
 
 	$sistema_2				= of_get_option( 'sistema_2', '' );
 	$sistema_titulo_3		= of_get_option( 'sistema_titulo_3', '' );
@@ -112,6 +115,9 @@ get_header(); ?>
 	$sistema_titulo_4		= of_get_option( 'sistema_titulo_4', '' );
 	$sistema_contenido_4	= of_get_option( 'sistema_contenido_4', '' );
 	$sistema_logo_4			= of_get_option( 'sistema_logo_4', '' );
+	$sistema_titulo_44		= of_get_option( 'sistema_titulo_44', '' );
+	$sistema_contenido_44	= of_get_option( 'sistema_contenido_44', '' );
+	$sistema_logo_44		= of_get_option( 'sistema_logo_44', '' );
 
 	if($sistema_1)
 	{
@@ -142,6 +148,19 @@ get_header(); ?>
 					</header>
 					<div class="losCarteles__articulo__contenido">
 						<p>'.$sistema_contenido_2.'</p>
+					</div>
+				</div>
+			</article>
+			<article class="losCarteles__articulo">
+				<figure class="losCarteles__articulo__img">
+					<img src="'.$sistema_logo_33.'" alt="'.get_bloginfo("name").'" />
+				</figure>
+				<div class="losCarteles__articulo__contenedor">
+					<header class="losCarteles__articulo__header">
+						<h3>'.$sistema_titulo_33.'</h3>
+					</header>
+					<div class="losCarteles__articulo__contenido">
+						<p>'.$sistema_contenido_33.'</p>
 					</div>
 				</div>
 			</article>
@@ -176,6 +195,19 @@ get_header(); ?>
 					</header>
 					<div class="losCarteles__articulo__contenido">
 						<p>'.$sistema_contenido_4.'</p>
+					</div>
+				</div>
+			</article>
+			<article class="losCarteles__articulo">
+				<figure class="losCarteles__articulo__img">
+					<img src="'.$sistema_logo_44.'" alt="'.get_bloginfo("name").'" />
+				</figure>
+				<div class="losCarteles__articulo__contenedor">
+					<header class="losCarteles__articulo__header">
+						<h3>'.$sistema_titulo_44.'</h3>
+					</header>
+					<div class="losCarteles__articulo__contenido">
+						<p>'.$sistema_contenido_44.'</p>
 					</div>
 				</div>
 			</article>

@@ -156,7 +156,7 @@ function optionsframework_options()
 		'name'	=>	__('Sistemas Industriales', 'options_framework_theme'),
 		'type'	=>	'heading');
 	
-		// Primer tipo de sistema
+		// TITULO 1
 		$options[]	=	array(
 			'name'			=>	__('Título para el primer tipo de sistema', 'options_framework_theme'),
 			'desc'			=>	__('Introduzca un título descriptivo.', 'options_framework_theme'),
@@ -166,7 +166,7 @@ function optionsframework_options()
 			'type'			=>	'text',
 		);
 
-		// Primer titulo del primer sistema
+		// Subtítulo 1.1
 		$options[]	=	array(
 			'name'			=>	__('Subtítulo para el sistema 1', 'options_framework_theme'),
 			'desc'			=>	__('Introduzca un subtítulo descriptivo.', 'options_framework_theme'),
@@ -176,7 +176,7 @@ function optionsframework_options()
 			'type'			=>	'text',
 		);
 
-		// Contenido o descripción
+		// Subtítulo 1.1.1 -> Contenido
 		$options[]	=	array(
 			'name'			=>	__('Mensaje o descripción', 'options_framework_theme'),
 			'desc'			=>	__('Introduzca un contenido.', 'options_framework_theme'),
@@ -186,7 +186,7 @@ function optionsframework_options()
 			'type'			=>	'textarea',
 		);
 
-		// Icono o imagen descriptiva
+		// Subtítulo 1.1.2 -> imagen
 		$options[]	=	array(
 			'name'		=>	__('Icono o imagen que identifica al sistema 1', 'options_framework_theme'),
 			'desc'		=>	__('Selecciona una imagen, tamaño 100px x 100px.', 'options_framework_theme'),
@@ -194,7 +194,7 @@ function optionsframework_options()
 			'type'		=>	'upload');
 		
 
-		// Primer titulo del segundo sistema
+		// Subtítulo 1.2
 		$options[]	=	array(
 			'name'			=>	__('Subtítulo para el sistema 2', 'options_framework_theme'),
 			'desc'			=>	__('Introduzca un título descriptivo.', 'options_framework_theme'),
@@ -204,7 +204,7 @@ function optionsframework_options()
 			'type'			=>	'text',
 		);
 
-		// Contenido o descripción
+		// Subtítulo 1.2.1 -> Contenido
 		$options[]	=	array(
 			'name'			=>	__('Mensaje o descripción', 'options_framework_theme'),
 			'desc'			=>	__('Introduzca un contenido.', 'options_framework_theme'),
@@ -214,15 +214,42 @@ function optionsframework_options()
 			'type'			=>	'textarea',
 		);
 
-		// Icono o imagen descriptiva
+		// Subtítulo 1.2.2 -> imagen
 		$options[]	=	array(
 			'name'		=>	__('Icono o imagen que identifica al sistema 2', 'options_framework_theme'),
 			'desc'		=>	__('Selecciona una imagen, tamaño 100px x 100px.', 'options_framework_theme'),
 			'id'		=>	'sistema_logo_2',
 			'type'		=>	'upload');
 		
+		// Subtítulo 1.3
+		$options[]	=	array(
+			'name'			=>	__('Subtítulo para el sistema 3', 'options_framework_theme'),
+			'desc'			=>	__('Introduzca un título descriptivo.', 'options_framework_theme'),
+			'id'			=>	'sistema_titulo_33',
+			'placeholder'	=>	__('Sistemas tipo xxx...', 'options_framework_theme'),
+			'class'			=>	'',
+			'type'			=>	'text',
+		);
+
+		// Subtítulo 1.3.1 -> Contenido
+		$options[]	=	array(
+			'name'			=>	__('Mensaje o descripción', 'options_framework_theme'),
+			'desc'			=>	__('Introduzca un contenido.', 'options_framework_theme'),
+			'id'			=>	'sistema_contenido_33',
+			'placeholder'	=>	__('Contenido de ejemplo...', 'options_framework_theme'),
+			'class'			=>	'',
+			'type'			=>	'textarea',
+		);
+
+		// Subtítulo 1.3.2 -> imagen
+		$options[]	=	array(
+			'name'		=>	__('Icono o imagen que identifica al sistema 3', 'options_framework_theme'),
+			'desc'		=>	__('Selecciona una imagen, tamaño 100px x 100px.', 'options_framework_theme'),
+			'id'		=>	'sistema_logo_33',
+			'type'		=>	'upload');
 		
-		// Segundo tipo de sistema
+		
+		// TITULO 2
 		$options[]	=	array(
 			'name'			=>	__('Título para el segundo tipo de sistema', 'options_framework_theme'),
 			'desc'			=>	__('Introduzca un título descriptivo.', 'options_framework_theme'),
@@ -232,7 +259,7 @@ function optionsframework_options()
 			'type'			=>	'text',
 		);
 
-		// Primer titulo del primer sistema
+		// Subtítulo 2.1
 		$options[]	=	array(
 			'name'			=>	__('Subítulo para el sistema 3', 'options_framework_theme'),
 			'desc'			=>	__('Introduzca un título descriptivo.', 'options_framework_theme'),
@@ -242,7 +269,7 @@ function optionsframework_options()
 			'type'			=>	'text',
 		);
 
-		// Contenido o descripción
+		// Subtítulo 2.1.1 -> Contenido
 		$options[]	=	array(
 			'name'			=>	__('Mensaje o descripción', 'options_framework_theme'),
 			'desc'			=>	__('Introduzca un contenido.', 'options_framework_theme'),
@@ -252,7 +279,7 @@ function optionsframework_options()
 			'type'			=>	'textarea',
 		);
 
-		// Icono o imagen descriptiva
+		// Subtítulo 2.1.2 -> imagen
 		$options[]	=	array(
 			'name'		=>	__('Icono o imagen que identifica al sistema 3', 'options_framework_theme'),
 			'desc'		=>	__('Selecciona una imagen, tamaño 100px x 100px.', 'options_framework_theme'),
@@ -260,7 +287,7 @@ function optionsframework_options()
 			'type'		=>	'upload');
 		
 
-		// Primer titulo del segundo sistema
+		// Subtítulo 2.2
 		$options[]	=	array(
 			'name'			=>	__('Subtítulo para el sistema 4', 'options_framework_theme'),
 			'desc'			=>	__('Introduzca un título descriptivo.', 'options_framework_theme'),
@@ -270,7 +297,7 @@ function optionsframework_options()
 			'type'			=>	'text',
 		);
 
-		// Contenido o descripción
+		// Subtítulo 2.2.1 -> Contenido
 		$options[]	=	array(
 			'name'			=>	__('Mensaje o descripción', 'options_framework_theme'),
 			'desc'			=>	__('Introduzca un contenido.', 'options_framework_theme'),
@@ -280,11 +307,38 @@ function optionsframework_options()
 			'type'			=>	'textarea',
 		);
 
-		// Icono o imagen descriptiva
+		// Subtítulo 2.2.2 -> imagen
 		$options[]	=	array(
 			'name'		=>	__('Icono o imagen que identifica al sistema 4', 'options_framework_theme'),
 			'desc'		=>	__('Selecciona una imagen, tamaño 100px x 100px.', 'options_framework_theme'),
 			'id'		=>	'sistema_logo_4',
+			'type'		=>	'upload');
+
+		// Subtítulo 2.3
+		$options[]	=	array(
+			'name'			=>	__('Subtítulo para el sistema 4', 'options_framework_theme'),
+			'desc'			=>	__('Introduzca un título descriptivo.', 'options_framework_theme'),
+			'id'			=>	'sistema_titulo_44',
+			'placeholder'	=>	__('Sistemas tipo xxx...', 'options_framework_theme'),
+			'class'			=>	'',
+			'type'			=>	'text',
+		);
+
+		// Subtítulo 2.3.1 -> Contenido
+		$options[]	=	array(
+			'name'			=>	__('Mensaje o descripción', 'options_framework_theme'),
+			'desc'			=>	__('Introduzca un contenido.', 'options_framework_theme'),
+			'id'			=>	'sistema_contenido_44',
+			'placeholder'	=>	__('Contenido de ejemplo...', 'options_framework_theme'),
+			'class'			=>	'',
+			'type'			=>	'textarea',
+		);
+
+		// Subtítulo 2.3.2 -> imagen
+		$options[]	=	array(
+			'name'		=>	__('Icono o imagen que identifica al sistema 4', 'options_framework_theme'),
+			'desc'		=>	__('Selecciona una imagen, tamaño 100px x 100px.', 'options_framework_theme'),
+			'id'		=>	'sistema_logo_44',
 			'type'		=>	'upload');
 	
 	
