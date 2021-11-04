@@ -252,20 +252,20 @@ function bld_personalizar_footer_storefront()
 		}
 		
 		// El email
-		echo '<p><i class="fas fa-envelope-square fa-lg"></i> ' . $email_options;
+		echo '<p class="redes_sociales__contacto"><i class="fas fa-envelope-square fa-3x"></i> <span>' . $email_options. '</span>';
 		
 		if($telefono_options)
 		{
-			echo '<br /><br /><i class="fas fa-phone-square-alt fa-lg"></i> ' . $telefono_options . '<br />';
+			echo '<br /><br /><i class="fas fa-phone-square-alt fa-3x"></i> <span>' . $telefono_options . '</span><br />';
 		}
 		
 		if($celular_options)
 		{
 			// Se oculta en desktop
-			echo '<br class="hidden-desktop" /><a class="hidden-desktop" href="whatsapp://send?phone=' . $celular_options . '&text=Hola Solisem. "><i class="fab fa-whatsapp-square fa-lg"></i></a> <span class="hidden-desktop">' . $celular_options . '</span>';
+			echo '<br class="hidden-desktop" /><a class="hidden-desktop" href="whatsapp://send?phone=' . $celular_options . '&text=Hola Solisem. "><i class="fab fa-whatsapp-square fa-3x"></i></a> <span class="hidden-desktop">' . $celular_options . '</span>';
 			
 			// Se muestra sólo en desktop
-			echo '<br class="hidden-tableta hidden-mobile" /><a class="hidden-tableta hidden-mobile" href="https://web.whatsapp.com/send?l=en&phone=' . $celular_options . '&text=Hola Solisem. "><i class="fab fa-whatsapp-square fa-lg"></i></a> <span class="hidden-mobile hidden-tableta">' . $celular_options . '</span>';
+			echo '<br class="hidden-tableta hidden-mobile" /><a class="hidden-tableta hidden-mobile" href="https://web.whatsapp.com/send?l=en&phone=' . $celular_options . '&text=Hola Solisem. "><i class="fab fa-whatsapp-square fa-3x"></i></a> <span class="hidden-mobile hidden-tableta">' . $celular_options . '</span>';
 		}
 		echo '</p>';
 	}
