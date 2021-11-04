@@ -339,6 +339,12 @@ function bld_personalizar_footer_storefront()
 		{
 			echo '<a href="//' . $linkedin_options . '" title="Linkedin" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a> ';
 		}
+
+		// Google Analitycs
+		if($google_analitycs_options)
+		{
+			echo '<scritp>' . $google_analitycs_options . '</sript>';
+		}
 		
 		?>		
 		
@@ -358,10 +364,16 @@ function bld_personalizar_footer_storefront()
 	
 </div>
 <?php }
-// Carga de scripts jquery para el slider
-wp_enqueue_script( 'script_jquery', get_stylesheet_directory_uri() . '/js/jquery-1.12.4.min.js', array ( 'jquery' ), '1.12.4', true);
 
-// Carga de los scripts de slider y utilizades como el gotop y fancybox
-wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/scripts.min.js', array ( 'jquery' ), '1.0', true);
+// Carga en cola los scripts y estilos del slider
+add_action( 'wp_enqueue_scripts', 'mi_slider_favorito' );
+function mi_slider_favorito()
+{
+	// Carga de scripts jquery para el slider
+	wp_enqueue_script( 'script_jquery', get_stylesheet_directory_uri() . '/js/jquery-1.12.4.min.js', array ( 'jquery' ), '1.12.4', true);
+	
+	// Carga de los scripts de slider y utilizades como el gotop y fancybox
+	wp_enqueue_script( 'script', get_stylesheet_directory_uri() . '/js/scripts.min.js', array ( 'jquery' ), '1.0', true);
+}
 
 ?>
