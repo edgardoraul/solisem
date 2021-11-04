@@ -234,7 +234,7 @@ function bld_personalizar_footer_storefront()
 	{
 		if( is_page('quienes-somos') || is_home() || is_front_page() )
 		{
-			echo '<h2>'.__('Ubicación', 'solisem').'</h2>' . $googlemaps_options;
+			echo '<h2>'.__('Ubicación', 'solisem').'</h2><div class="mapa">' . $googlemaps_options . '</div>';
 		}
 	}
 	
