@@ -343,7 +343,7 @@ function bld_personalizar_footer_storefront()
 		// Google Analitycs
 		if($google_analitycs_options)
 		{
-			echo '<scritp>' . $google_analitycs_options . '</sript>';
+			echo '<script>' . $google_analitycs_options . '</sript>';
 		}
 		
 		?>		
