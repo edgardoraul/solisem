@@ -5,13 +5,13 @@
 	&__wrapper 
 		align-content: space-between
 		align-items: stretch
-		flex-direction: column
+		flex-direction: row
 		display: flex
 		flex-wrap: wrap
 		justify-content: stretch
 	
 	&__articulo
-		flex: 1 1 auto
+		flex: 0 0 100%
 		padding: 0.5em 0
 
 		&__header
@@ -23,16 +23,16 @@
 			justify-content: center
 			margin-bottom: 1.5em
 			min-height: 150px
+			padding: 1em
 			text-align: center
-			transition_comun()
 
 			&:hover
 				background-color: rojo_solisem
+				transition_comun()
 
 			h1, h2, h3, h4, h5, h6
 				color: blanco_puro
 				font-weight: bold
-				text-shadow_lindo()
 
 @media all and ( min-width: ( $mobile * 1.25 ) )
 	.losSegmentos
@@ -41,7 +41,7 @@
 			gap: 1em
 		
 		&__articulo
-			flex-basis: 30%
+			flex: 1 1 30%
 
 		
 		
