@@ -332,7 +332,7 @@ if ( ! function_exists( 'storefront_page_header' ) ) {
 		?>
 		<header class="entry-header">
 			<?php
-			storefront_post_thumbnail( 'thumbnail' );
+			storefront_post_thumbnail( 'custom-thumb-1200-500' );
 			the_title( '<h1 class="entry-title">', '</h1>' );
 			?>
 		</header><!-- .entry-header -->
@@ -678,7 +678,7 @@ if ( ! function_exists( 'storefront_post_thumbnail' ) ) {
 	 * @param string $size the post thumbnail size.
 	 * @since 1.5.0
 	 */
-	function storefront_post_thumbnail( $size = 'thumbnail' ) {
+	function storefront_post_thumbnail( $size = 'custom-thumb-1200-500' ) {
 		if ( has_post_thumbnail() ) {
 			the_post_thumbnail( $size );
 		}
