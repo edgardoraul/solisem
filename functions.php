@@ -28,6 +28,7 @@ if ( !function_exists( 'optionsframework_init' ) )
 
 add_action( 'optionsframework_custom_scripts', 'optionsframework_custom_scripts' );
 
+*/
 function optionsframework_custom_scripts() { ?>
 
 <script type="text/javascript">
@@ -46,7 +47,10 @@ jQuery(document).ready(function()
 
 <?php
 }
-*/
+
+// Inclusión de soporte para metaboxes
+require_once "includes/08._configuracion_metabox.php";
+require_once "includes/meta-box/meta-box.php";
 
 // Sitemap en xml
 require_once "includes/06._sitemap.php";
@@ -193,7 +197,7 @@ function no__rrors_please()
 add_filter( 'login__rrors', 'no__rrors_please' );
 
 // Remover los créditos
-require_once "storefront-template-functions.php";
+require_once "inc/storefront-template-functions.php";
 
 // Eliminar el footer por defecto de Storefront y añadir uno personalizado
 add_action( 'init', 'bld_eliminar_footer_storefront', 10 );

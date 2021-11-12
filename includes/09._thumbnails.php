@@ -10,13 +10,14 @@ add_filter( 'image_send_to_editor',
 	}, 10, 8 );
 
 // Definir tamaños personalizados de miniaturas - hay que configurarlas
-/*add_theme_support( 'post-thumbnails', array(
+add_theme_support( 'post-thumbnails', array(
 	'post',
 	'page',
 	'sliders',
+	'segmentos_post_type',
 	)
-);*/
-add_theme_support('post-thumbnails');
+);
+// add_theme_support('post-thumbnails');
 
 // Las thumbnails por defecto
 the_post_thumbnail( 'thumbnail' );

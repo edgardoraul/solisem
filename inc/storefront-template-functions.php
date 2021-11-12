@@ -2,7 +2,7 @@
 /**
  * Storefront template functions.
  *
- * @package solisem
+ * @package storefront
  */
 
 if ( ! function_exists( 'storefront_display_comments' ) ) {
@@ -332,7 +332,7 @@ if ( ! function_exists( 'storefront_page_header' ) ) {
 		?>
 		<header class="entry-header">
 			<?php
-			storefront_post_thumbnail( 'custom-thumb-1200-500' );
+			storefront_post_thumbnail( 'thumbnail' );
 			the_title( '<h1 class="entry-title">', '</h1>' );
 			?>
 		</header><!-- .entry-header -->
@@ -350,6 +350,7 @@ if ( ! function_exists( 'storefront_page_content' ) ) {
 		?>
 		<div class="entry-content">
 			<?php the_content(); ?>
+			
 			<?php
 				wp_link_pages(
 					array(
@@ -411,7 +412,7 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 		 * @hooked storefront_post_thumbnail - 10
 		 */
 		do_action( 'storefront_post_content_before' );
-
+		echo '<hr />';
 		the_content(
 			sprintf(
 				/* translators: %s: post title */
@@ -420,9 +421,32 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 			)
 		);
 
-		do_action( 'storefront_post_content_after' );
+		do_action( 'storefront_post_content_after' );?>
 
-		wp_link_pages(
+		<!-- Un slider para lo producido -->
+		<div id="owl-galeria" class="owl-carousel slider__secundario">
+		<?php 
+
+		$imagenes = rwmb_meta( 'solisem_imagenes', 'size=custom-thumb-300-200' );
+
+		if ( !empty( $imagenes ) )
+		{
+			foreach ( $imagenes as $imagen )
+			{
+				echo '<div class="slider__item">
+						<figure>';
+				echo "<a rel='index' class='gradient swipebox' href='{$imagen['custom-thumb-1200-x']}'>";
+				echo "<img src='#' class='lazyOwl' data-src='{$imagen['url']}' alt='{$imagen['alt']}' />";
+				echo '</a>';
+				echo '</figure>
+					</div>';
+			}
+		}?>
+				
+		</div>
+
+
+		<?php wp_link_pages(
 			array(
 				'before' => '<div class="page-links">' . __( 'Pages:', 'storefront' ),
 				'after'  => '</div>',
@@ -654,7 +678,7 @@ if ( ! function_exists( 'storefront_post_thumbnail' ) ) {
 	 * @param string $size the post thumbnail size.
 	 * @since 1.5.0
 	 */
-	function storefront_post_thumbnail( $size = 'custom-thumb-1200-500' ) {
+	function storefront_post_thumbnail( $size = 'thumbnail' ) {
 		if ( has_post_thumbnail() ) {
 			the_post_thumbnail( $size );
 		}
