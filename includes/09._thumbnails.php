@@ -10,14 +10,14 @@ add_filter( 'image_send_to_editor',
 	}, 10, 8 );
 
 // Definir tamaños personalizados de miniaturas - hay que configurarlas
-add_theme_support( 'post-thumbnails', array(
+/* add_theme_support( 'post-thumbnails', array(
 	'post',
 	'page',
 	'sliders',
 	'segmentos_post_type',
 	)
-);
-// add_theme_support('post-thumbnails');
+); */
+add_theme_support('post-thumbnails');
 
 // Las thumbnails por defecto
 the_post_thumbnail( 'thumbnail' );
@@ -103,7 +103,6 @@ function set_max_srcset_image_width( $max_width, $size_array )
 add_filter( 'max_srcset_image_width', 'set_max_srcset_image_width', 10, 2 );
 
 // Habilitar la compresión de imágenes
-// add_filter( 'jpeg_quality', create_function( '', 'return 75;' ) ); desahabilitado
 function optimizadorImagen()
 {
 	return 75;

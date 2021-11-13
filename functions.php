@@ -55,7 +55,13 @@ require_once "includes/meta-box/meta-box.php";
 // Sitemap en xml
 require_once "includes/06._sitemap.php";
 
-// Las miniaturas
+// Deshabilitando clas miniaturas y otras cosas del tema padre
+add_action('after_setup_theme', 'remove_parent_theme_features', 30);
+function remove_parent_theme_features()
+{
+	remove_theme_support('storefront_post_thumbnail');
+}
+// Las miniaturas programadas por mi
 require_once "includes/09._thumbnails.php";
 
 // Minificación del html

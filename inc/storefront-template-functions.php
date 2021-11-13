@@ -332,7 +332,7 @@ if ( ! function_exists( 'storefront_page_header' ) ) {
 		?>
 		<header class="entry-header">
 			<?php
-			storefront_post_thumbnail( 'custom-thumb-1200-500' );
+			storefront_post_thumbnail( 'full' );
 			the_title( '<h1 class="entry-title">', '</h1>' );
 			?>
 		</header><!-- .entry-header -->
@@ -425,10 +425,7 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 
 		<!-- Un slider para lo producido -->
 		<div id="owl-galeria" class="owl-carousel slider__secundario">
-		<?php 
-
-		$imagenes = rwmb_meta( 'solisem_imagenes', 'size=custom-thumb-300-200' );
-
+		<?php $imagenes = rwmb_meta( 'solisem_imagenes', 'size=custom-thumb-300-200' );
 		if ( !empty( $imagenes ) )
 		{
 			foreach ( $imagenes as $imagen )
@@ -437,11 +434,11 @@ if ( ! function_exists( 'storefront_post_content' ) ) {
 						<figure>';
 				echo "<a rel='index' class='gradient swipebox' href='{$imagen['custom-thumb-1200-x']}'>";
 				echo "<img src='#' class='lazyOwl' data-src='{$imagen['url']}' alt='{$imagen['alt']}' />";
-				echo '</a>';
-				echo '</figure>
-					</div>';
+				echo '</a>
+					</figure>
+				</div>';
 			}
-		}?>
+		};?>
 				
 		</div>
 
@@ -678,7 +675,7 @@ if ( ! function_exists( 'storefront_post_thumbnail' ) ) {
 	 * @param string $size the post thumbnail size.
 	 * @since 1.5.0
 	 */
-	function storefront_post_thumbnail( $size = 'custom-thumb-1200-500' ) {
+	function storefront_post_thumbnail( $size = 'full' ) {
 		if ( has_post_thumbnail() ) {
 			the_post_thumbnail( $size );
 		}

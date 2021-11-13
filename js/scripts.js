@@ -182,7 +182,7 @@ $( document ).ready( function()
 	$( "#owl-galeria" ).owlCarousel({
 		autoPlay: true,
 		lazyLoad : true,
-		items: 3
+		items: 4
 	});
 });
 
@@ -192,7 +192,6 @@ $(document).ready(function()
 {
 	(function()
 	{
-
 		// Activando el slider
 		$('.swipebox').swipebox({
 			// useCSS : false,

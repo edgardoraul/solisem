@@ -1427,7 +1427,6 @@ textarea:focus {
   filter: sepia(30%);
 }
 .slider__item figure:after {
-  background-color: rgba(0,0,0,0.25);
   content: "";
   left: 0;
   height: 100%;
@@ -1470,6 +1469,7 @@ textarea:focus {
   overflow: hidden;
 }
 .slider__secundario .slider__item figure a {
+  background: none;
   display: block;
   overflow: hidden;
   position: relative;
@@ -1478,6 +1478,7 @@ textarea:focus {
 }
 .slider__secundario .slider__item figure a:before {
   background: rgba(11,6,12,0.5);
+  border-radius: 4px;
   content: "";
   height: 100%;
   left: 0;
@@ -1490,6 +1491,7 @@ textarea:focus {
 }
 .slider__secundario .slider__item figure a:after {
   color: rgba(255,255,255,0.5);
+  border-radius: 4px;
   content: "\f198";
   font-family: "dashicons";
   font-size: 2em;
@@ -1526,6 +1528,7 @@ textarea:focus {
 }
 .slider__secundario .slider__item figure img {
   border: 1px solid #ecf0f1;
+  border-radius: 4px;
   display: block;
   position: relative;
   width: 100%;
