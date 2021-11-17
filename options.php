@@ -372,8 +372,8 @@ function optionsframework_options()
 	$options[] = array(
 		'name' 			=> __('Instagram', 'options_framework_theme'),
 		'desc' 			=> __('Introduzca su usuario de Instagram.', 'options_framework_theme'),
-		'id' 			=> 'instagram_options',
-		'placeholder' 	=> '@usuario_de_instagram',
+		'id' 			=> 'instagram_contact',
+		'placeholder' 	=> 'usuario_de_instagram',
 		'class'			=> '',
 		'type' 			=> 'text',
 	);
