@@ -2,7 +2,7 @@
   "name": "solisem",
   "version": "0.0.1",
   "devDependencies": {
-    "grunt": "^1.0.3",
+    "grunt": "^1.5.2",
     "grunt-contrib-uglify": "^4.0.0",
     "grunt-contrib-watch": "^1.1.0",
     "nib": "^1.1.2"
